@@ -365,9 +365,9 @@ void setUpGame()
 	currentTurn = 1;
 
 	// Reset the gameState by removing all elements from the array
-	for (int i = 0; i < gameBoardSize; i++) {
-		gameState[i] = { };
-	}
+	//for (int i = 0; i < gameBoardSize; i++) {
+	//	gameState[i] = { };
+	//}
 }
 
 void askToPlayAgain()
