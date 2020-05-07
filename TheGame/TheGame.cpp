@@ -331,7 +331,7 @@ void playGame()
 		{
 			currentTurn++;
 		}
-	} while (currentTurn < maximumPlayerTurns && gameWon == false);
+	} while (currentTurn < maximumPlayerTurns && !gameWon);
 
 	if (!gameWon)
 	{
