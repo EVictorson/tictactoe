@@ -1,7 +1,6 @@
 #pragma once
-class GameWinChecker
-{
+class GameWinChecker {
 public:
-	bool checkIfSymbolHasWon(char symbol, char gameState[]);
+	const bool checkIfSymbolHasWon(char symbol, char gameState[]);
 };
 
