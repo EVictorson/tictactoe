@@ -41,9 +41,7 @@ jobs:
         uses: darenm/Setup-VSTest@v1
         id: setup_vstest
 
-      - name: Find unit tests
-        id: find_tests
+      - name: Run VSTest
+        id: run_vstest
         working-directory: ${{ github.workspace }}\x64\Debug\
-        run: dir
-          
-# where I think tests are found: ${{ github.workspace }}\Debug\UnitTests.dll
+        run: vstest.console.exe /Platform:x64 .\UnitTests.dll
