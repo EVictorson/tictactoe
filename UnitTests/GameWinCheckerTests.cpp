@@ -137,6 +137,13 @@ namespace GameWinCheckerTests
 			Assert::IsFalse(gameWon, L"More information here...");
 		}
 
+		/*TEST_METHOD(Failing_Test)
+		{
+			bool myBool = false;
+
+			Assert::IsTrue(myBool, L"This test is intended to fail.");
+		}*/
+
 	};
 
 	//TEST_CLASS(MoveValidator)
