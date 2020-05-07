@@ -43,7 +43,7 @@ jobs:
 
       - name: Find unit tests
         id: find_tests
-        working-directory: ${{ github.workspace }}\Debug
+        working-directory: ${{ github.workspace }}
         run: dir
           
 # where I think tests are found: ${{ github.workspace }}\Debug\UnitTests.dll
