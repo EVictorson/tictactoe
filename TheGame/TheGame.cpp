@@ -37,7 +37,7 @@ char userInput;
 bool validUserInput;
 int playerOneScore = 0;
 int playerTwoScore = 0;
-char currentPlayerMark;
+char symbol;
 
 int main() {
   printIntro();
@@ -273,6 +273,7 @@ void showCredits() {
   }
 }
 
+<<<<<<< HEAD
 void playGame() {
   setUpGame();
   drawCurrentGameState();
@@ -301,6 +302,44 @@ void playGame() {
   }
 
   askToPlayAgain();
+=======
+void playGame()
+{
+	setUpGame();
+	draw(convertGameStateToVisualRepresentation(gameState));
+
+	do
+	{
+		if (currentTurn % 2 == 1)
+		{
+			symbol = 'X';
+			std::cout << "> Player 1's turn [X]\n";
+		}
+		else
+		{
+			symbol = 'O';
+			std::cout << "> Player 2's turn [O]\n";
+		}
+		
+		getPlayerMove(symbol);
+		draw(convertGameStateToVisualRepresentation(gameState));
+		checkForWin();
+		if (gameWon) {
+			printWinningMessage();
+		}
+		else
+		{
+			currentTurn++;
+		}
+	} while (currentTurn < maximumPlayerTurns && gameWon == false);
+
+	if (!gameWon)
+	{
+		std::cout << "           It's a draw! Better luck next time...\n\n";
+	}
+
+	askToPlayAgain();
+>>>>>>> Rename currentPlayerMark variable to symbol
 }
 
 void drawCurrentGameState() {
@@ -361,11 +400,6 @@ bool checkValidMove(int playerMove) {
   }
 }
 
-void checkForWin() {
-  GameWinChecker gameWinChecker;
-  gameWon = gameWinChecker.checkIfSymbolHasWon(currentPlayerMark, gridLabels);
-}
-
 void printWinningMessage() {
   if (currentTurn % 2 == 1) {
     std::cout << "> Player 1 wins! [X]\n\n";
@@ -374,5 +408,10 @@ void printWinningMessage() {
     std::cout << "> Player 2 wins! [O]\n\n";
     playerTwoScore++;
   }
+}
+
+void checkForWin() {
+	GameWinChecker gameWinChecker;
+	gameWon = gameWinChecker.checkIfSymbolHasWon(symbol, gameState);
 }
 
