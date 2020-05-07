@@ -7,8 +7,6 @@
 #include <unistd.h>
 #endif
 
-#pragma once
-
 #include <iostream>
 #include <stdlib.h>
 #include <conio.h>
