@@ -2,7 +2,6 @@
 class GameWinChecker
 {
 public:
-	const bool checkIfSymbolHasWon(char symbol, char gameGrid[]);
-
+	const bool checkIfSymbolHasWon(char symbol, char gameState[]);
 };
 

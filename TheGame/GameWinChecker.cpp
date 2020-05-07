@@ -1,18 +1,18 @@
 
 #include "GameWinChecker.h"
 
-const bool GameWinChecker::checkIfSymbolHasWon(char symbol, char gameGrid[])
+const bool GameWinChecker::checkIfSymbolHasWon(char symbol, char gameState[])
 {
-	bool horizontalWin = ((gameGrid[1] == gameGrid[2]) && (gameGrid[2] == gameGrid[3]) ||
-		(gameGrid[4] == gameGrid[5]) && (gameGrid[5] == gameGrid[6]) ||
-		(gameGrid[7] == gameGrid[8]) && (gameGrid[8] == gameGrid[9]));
+	bool horizontalWin = (gameState[0] == symbol && gameState[1] == symbol && gameState[2] == symbol ||
+		gameState[3] == symbol && gameState[4] == symbol && gameState[5] == symbol ||
+		gameState[6] == symbol && gameState[7] == symbol && gameState[8] == symbol);
 
-	bool verticalWin = ((gameGrid[1] == gameGrid[4]) && (gameGrid[4] == gameGrid[7]) ||
-		(gameGrid[2] == gameGrid[5]) && (gameGrid[5] == gameGrid[8]) ||
-		(gameGrid[3] == gameGrid[6]) && (gameGrid[6] == gameGrid[9]));
+	bool verticalWin = (gameState[0] == symbol && gameState[3] == symbol && gameState[6] == symbol ||
+		gameState[1] == symbol && gameState[4] == symbol && gameState[7] == symbol ||
+		gameState[2] == symbol && gameState[5] == symbol && gameState[8] == symbol);
 
-	bool diagonalWin = ((gameGrid[1] == gameGrid[5]) && (gameGrid[5] == gameGrid[9]) ||
-		(gameGrid[3] == gameGrid[5]) && (gameGrid[5] == gameGrid[7]));
+	bool diagonalWin = (gameState[0] == symbol && gameState[4] == symbol && gameState[8] == symbol ||
+		gameState[2] == symbol && gameState[4] == symbol && gameState[6] == symbol);
 
 	return (horizontalWin || verticalWin || diagonalWin);
 }
