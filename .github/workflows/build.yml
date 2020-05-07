@@ -41,3 +41,4 @@ jobs:
       - name: Setup VSTest path
         uses: darenm/Setup-VSTest@v1
         id: setup_vstest
+
