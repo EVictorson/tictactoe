@@ -41,7 +41,7 @@ char userInput;
 bool validUserInput;
 int playerOneScore = 0;
 int playerTwoScore = 0;
-char currentPlayerMark;
+char symbol;
 
 int main()
 {
@@ -311,16 +311,16 @@ void playGame()
 	{
 		if (currentTurn % 2 == 1)
 		{
-			currentPlayerMark = 'X';
+			symbol = 'X';
 			std::cout << "> Player 1's turn [X]\n";
 		}
 		else
 		{
-			currentPlayerMark = 'O';
+			symbol = 'O';
 			std::cout << "> Player 2's turn [O]\n";
 		}
 		
-		getPlayerMove(currentPlayerMark);
+		getPlayerMove(symbol);
 		draw(convertGameStateToVisualRepresentation(gameState));
 		checkForWin();
 		if (gameWon) {
@@ -330,7 +330,7 @@ void playGame()
 		{
 			currentTurn++;
 		}
-	} while (currentTurn < maximumPlayerTurns && gameWon == false);
+	} while (currentTurn < maximumPlayerTurns && !gameWon);
 
 	if (!gameWon)
 	{
@@ -354,7 +354,7 @@ std::string convertScoreToVisualRepresentation(int playerOneScore, int playerTwo
 
 std::string convertGameStateToVisualRepresentation(char gameState[])
 {
-	gameBoard = "                                     |   |   \n                                    " + std::to_string(gameState[0]+1) + " |  " + std::to_string(gameState[1]+1) + " |  " + std::to_string(gameState[2] + 1) + " \n                                  ___|___|___\n                                     |   |   \n                                   " + std::to_string(gameState[3] + 1) + " | " + std::to_string(gameState[4] + 1) + " | " + std::to_string(gameState[5] + 1) + " \n                                  ___|___|___\n                                     |   |   \n                                   " + std::to_string(gameState[6] + 1) + " | " + std::to_string(gameState[7] + 1) + " | " + std::to_string(gameState[8] + 1) + " \n                                     |   |   \n\n";
+	gameBoard = "                                     |   |   \n                                    " + std::to_string(1) + " |  " + std::to_string(2) + " |  " + std::to_string(3) + " \n                                  ___|___|___\n                                     |   |   \n                                   " + std::to_string(4) + " | " + std::to_string(5) + " | " + std::to_string(6) + " \n                                  ___|___|___\n                                     |   |   \n                                   " + std::to_string(7) + " | " + std::to_string(8) + " | " + std::to_string(9) + " \n                                     |   |   \n\n";
 
 	return (gameBoard);
 }
@@ -365,9 +365,9 @@ void setUpGame()
 	currentTurn = 1;
 
 	// Reset the gameState by removing all elements from the array
-	for (int i = 0; i < gameBoardSize; i++) {
-		gameState[i] = { };
-	}
+	//for (int i = 0; i < gameBoardSize; i++) {
+	//	gameState[i] = { };
+	//}
 }
 
 void askToPlayAgain()
@@ -417,7 +417,7 @@ bool checkValidMove(int playerMove)
 void checkForWin()
 {
 	GameWinChecker gameWinChecker;
-	gameWon = gameWinChecker.checkIfSymbolHasWon(currentPlayerMark, gameState);
+	gameWon = gameWinChecker.checkIfSymbolHasWon(symbol, gameState);
 }
 
 
@@ -436,14 +436,3 @@ void printWinningMessage()
 		playerTwoScore++;
 	}
 }
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
