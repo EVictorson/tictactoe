@@ -41,7 +41,7 @@ char userInput;
 bool validUserInput;
 int playerOneScore = 0;
 int playerTwoScore = 0;
-char currentPlayerMark;
+char symbol;
 
 int main()
 {
@@ -311,16 +311,16 @@ void playGame()
 	{
 		if (currentTurn % 2 == 1)
 		{
-			currentPlayerMark = 'X';
+			symbol = 'X';
 			std::cout << "> Player 1's turn [X]\n";
 		}
 		else
 		{
-			currentPlayerMark = 'O';
+			symbol = 'O';
 			std::cout << "> Player 2's turn [O]\n";
 		}
 		
-		getPlayerMove(currentPlayerMark);
+		getPlayerMove(symbol);
 		draw(convertGameStateToVisualRepresentation(gameState));
 		checkForWin();
 		if (gameWon) {
@@ -417,7 +417,7 @@ bool checkValidMove(int playerMove)
 void checkForWin()
 {
 	GameWinChecker gameWinChecker;
-	gameWon = gameWinChecker.checkIfSymbolHasWon(currentPlayerMark, gameState);
+	gameWon = gameWinChecker.checkIfSymbolHasWon(symbol, gameState);
 }
 
 
