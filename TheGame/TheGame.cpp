@@ -354,7 +354,7 @@ std::string convertScoreToVisualRepresentation(int playerOneScore, int playerTwo
 
 std::string convertGameStateToVisualRepresentation(char gameState[])
 {
-	gameBoard = "                                     |   |   \n                                    " + std::to_string(gameState[0]+1) + " |  " + std::to_string(gameState[1]+1) + " |  " + std::to_string(gameState[2] + 1) + " \n                                  ___|___|___\n                                     |   |   \n                                   " + std::to_string(gameState[3] + 1) + " | " + std::to_string(gameState[4] + 1) + " | " + std::to_string(gameState[5] + 1) + " \n                                  ___|___|___\n                                     |   |   \n                                   " + std::to_string(gameState[6] + 1) + " | " + std::to_string(gameState[7] + 1) + " | " + std::to_string(gameState[8] + 1) + " \n                                     |   |   \n\n";
+	gameBoard = "                                     |   |   \n                                    " + std::to_string(1) + " |  " + std::to_string(2) + " |  " + std::to_string(3) + " \n                                  ___|___|___\n                                     |   |   \n                                   " + std::to_string(4) + " | " + std::to_string(5) + " | " + std::to_string(6) + " \n                                  ___|___|___\n                                     |   |   \n                                   " + std::to_string(7) + " | " + std::to_string(8) + " | " + std::to_string(9) + " \n                                     |   |   \n\n";
 
 	return (gameBoard);
 }
