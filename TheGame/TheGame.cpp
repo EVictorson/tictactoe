@@ -11,6 +11,7 @@
 #include <stdlib.h>
 #include <conio.h>
 #include "GameWinChecker.h"
+#include "GameDataConverter.h"
 
 void playGame();
 void printIntro();
