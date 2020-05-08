@@ -39,7 +39,7 @@ std::string GameDataConverter::convertGameStateToVisualRepresentation(char gameS
 	return (gameBoard);
 }
 
-//std::string convertScoreToVisualRepresentation(int playerOneScore, int playerTwoScore)
+//std::string GameDataConverter::convertScoreToVisualRepresentation(int playerOneScore, int playerTwoScore)
 //{
 //	std::string p1 = std::to_string(playerOneScore);
 //	std::string p2 = std::to_string(playerTwoScore);
