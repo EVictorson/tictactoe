@@ -7,6 +7,6 @@ class GameDataConverter
 {
 public:
 	std::string convertGameStateToVisualRepresentation(char gameState[]);
-	std::string convertScoreToVisualRepresentation(int playerOneScore, int playerTwoScore);
+	// std::string convertScoreToVisualRepresentation(int playerOneScore, int playerTwoScore);
 };
 
