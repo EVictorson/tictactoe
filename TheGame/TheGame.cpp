@@ -22,15 +22,20 @@ void askToPlayAgain();
 void getPlayerMove(char currentPlayerMark);
 bool checkValidMove(int playerMove);
 void checkForWin();
-void printWinningMessage();
-void showMenu();
-void showScoreboard();
-void showCredits();
 
 const int gridSize = 11;
 char gridPositions[gridSize] = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '\0' };
 char gridLabels[gridSize];
 bool horizontalWin, verticalWin, diagonalWin, gameWon;
+void printWinningMessage(); // TODO: use draw method to print winning message
+void showMenu(); // TODO: use draw method to show menu
+void showHighscoreMenu();
+void showCreditsMenu();
+
+const int gameBoardSize = 10;
+char gameState[gameBoardSize] = { };
+std::string gameBoard;
+std::string scoreBoard;
 int playerMove;
 int playerTurns;
 int currentTurn;
