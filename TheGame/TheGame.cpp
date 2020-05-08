@@ -15,7 +15,8 @@
 void playGame();
 void printIntro();
 void printInstructions();
-void drawCurrentGameState();
+
+void draw(std::string stringToDrawOnScreen);
 void setUpGame();
 void askToPlayAgain();
 void getPlayerMove(char currentPlayerMark);
@@ -273,36 +274,6 @@ void showCredits() {
   }
 }
 
-<<<<<<< HEAD
-void playGame() {
-  setUpGame();
-  drawCurrentGameState();
-
-  do {
-    if (currentTurn % 2 == 1) {
-      currentPlayerMark = 'X';
-      std::cout << "> Player 1's turn [X]\n";
-    } else {
-      currentPlayerMark = 'O';
-      std::cout << "> Player 2's turn [O]\n";
-    }
-    
-    getPlayerMove(currentPlayerMark);
-    drawCurrentGameState();
-    checkForWin();
-    if (gameWon) {
-      printWinningMessage();
-    } else {
-      currentTurn++;
-    }
-  } while (currentTurn < playerTurns && gameWon == false);
-
-  if (!gameWon) {
-    std::cout << "           It's a draw! Better luck next time...\n\n";
-  }
-
-  askToPlayAgain();
-=======
 void playGame()
 {
 	setUpGame();
@@ -339,35 +310,11 @@ void playGame()
 	}
 
 	askToPlayAgain();
->>>>>>> Rename currentPlayerMark variable to symbol
-}
-
-void drawCurrentGameState() {
-  scoreBoard = "                         Player 1 [X] vs. Player 2 [O]\n\n                                    " + std::to_string(playerOneScore) + "  -  " + std::to_string(playerTwoScore) + "\n\n";
-  
-  return (scoreBoard);
-}
-
-std::string convertGameStateToVisualRepresentation(char gameState[]) {
-  gameBoard = "                                     |   |   \n                                    " + std::to_string(1) + " |  " + std::to_string(2) + " |  " + std::to_string(3) + " \n                                  ___|___|___\n                                     |   |   \n                                   " + std::to_string(4) + " | " + std::to_string(5) + " | " + std::to_string(6) + " \n                                  ___|___|___\n                                     |   |   \n                                   " + std::to_string(7) + " | " + std::to_string(8) + " | " + std::to_string(9) + " \n                                     |   |   \n\n";
-
-  return (gameBoard);
 }
 
 void setUpGame() {
-  playerTurns = gridSize - 1;
-  currentTurn = 1;
-
-  // Populate the grid spaces with place holder numbers
-  for (int i = 0; i < gridSize; i++) {
-    gridLabels[i] = gridPositions[i];
-  }
-}
-
-void askToPlayAgain() {
-  char playerAnswer;
-  std::cout << "Do you want to play again? Y/N...\n";
-  std::cin >> playerAnswer;
+	maximumPlayerTurns = gameBoardSize - 1;
+	currentTurn = 1;
 
   if (playerAnswer == 'y' || playerAnswer == 'Y') {
     playGame();
