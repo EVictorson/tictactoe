@@ -26,13 +26,13 @@ std::string GameDataConverter::convertGameStateToVisualRepresentation(char gameS
 
 	std::string gameBoard = R"(
    |   |
-  )" + std::to_string(gameState[0]) + " | " + std::to_string(gameState[1]) + " | " + std::to_string(gameState[2]) + R"(
+ )" + std::to_string(gameState[0]) + " | " + std::to_string(gameState[1]) + " | " + std::to_string(gameState[2]) + R"(
 ___|___|___
    |   |
-  )" + std::to_string(gameState[3]) + " | " + std::to_string(gameState[4]) + " | " + std::to_string(gameState[5]) + R"(
+ )" + std::to_string(gameState[3]) + " | " + std::to_string(gameState[4]) + " | " + std::to_string(gameState[5]) + R"(
 ___|___|___
    |   |
-  )" + std::to_string(gameState[6]) + " | " + std::to_string(gameState[7]) + " | " + std::to_string(gameState[8]) + R"(
+ )" + std::to_string(gameState[6]) + " | " + std::to_string(gameState[7]) + " | " + std::to_string(gameState[8]) + R"(
    |   |
 )";
 
