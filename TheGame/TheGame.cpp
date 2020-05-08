@@ -32,7 +32,7 @@ const int gameBoardSize = 10;
 char gameState[gameBoardSize] = { };
 std::string gameBoard;
 std::string scoreBoard;
-bool horizontalWin, verticalWin, diagonalWin, gameWon;
+bool gameWon;
 int playerMove;
 int maximumPlayerTurns;
 int currentTurn;
