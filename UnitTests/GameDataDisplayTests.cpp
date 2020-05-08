@@ -20,20 +20,21 @@ namespace GameDataDisplayTests
 				'\0' };
 
 			std::string expectedGameBoard = R"(
-			                                     |   |   
-			                                   1 | 2 | 3 
+			                                     |   |
+			                                   1 | 2 | 3
 			                                  ___|___|___
-			                                     |   |   
-			                                   4 | 5 | 6 
+			                                     |   |
+			                                   4 | 5 | 6
 			                                  ___|___|___
-			                                     |   |   
-			                                   7 | 8 | 9 
-			                                     |   |   
+			                                     |   |
+			                                   7 | 8 | 9
+			                                     |   |
 			)";
 
 			// Act
 			GameDataConverter gameDataConverter;
 			std::string gameBoard = gameDataConverter.convertGameStateToVisualRepresentation(gameState);
+
 
 			// Assert
 			Assert::AreEqual(expectedGameBoard, gameBoard);
@@ -49,15 +50,15 @@ namespace GameDataDisplayTests
 				'\0' };
 
 			std::string expectedGameBoard = R"(
-			                                     |   |   
+			                                     |   |
 			                                   X | O | X 
 			                                  ___|___|___
-			                                     |   |   
-			                                   X | X | O 
+			                                     |   |
+			                                   X | X | O
 			                                  ___|___|___
-			                                     |   |   
-			                                   O | X | O 
-			                                     |   |   
+			                                     |   |
+			                                   O | X | O
+			                                     |   |
 			)";
 
 			// Act
@@ -78,15 +79,15 @@ namespace GameDataDisplayTests
 				'\0' };
 
 			std::string expectedGameBoard = R"(
-			                                     |   |   
-			                                   X | 2 | 3 
+			                                     |   |
+			                                   X | 2 | 3
 			                                  ___|___|___
-			                                     |   |   
-			                                   O | O | 6 
+			                                     |   |
+			                                   O | O | 6
 			                                  ___|___|___
-			                                     |   |   
-			                                   X | X | X 
-			                                     |   |   
+			                                     |   |
+			                                   X | X | X
+			                                     |   |
 			)";
 
 			// Act
@@ -107,15 +108,15 @@ namespace GameDataDisplayTests
 				'\0' };
 
 			std::string expectedGameBoard = R"(
-			                                     |   |   
-			                                   X | 2 | O 
+			                                     |   |
+			                                   X | 2 | O
 			                                  ___|___|___
-			                                     |   |   
-			                                   O | 5 | 6 
+			                                     |   |
+			                                   O | 5 | 6
 			                                  ___|___|___
-			                                     |   |   
-			                                   7 | 8 | X 
-			                                     |   |   
+			                                     |   |
+			                                   7 | 8 | X
+			                                     |   |
 			)";
 
 			// Act
