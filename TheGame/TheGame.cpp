@@ -17,7 +17,6 @@ void playGame();
 void printIntro();
 void printInstructions();
 
-void draw(std::string stringToDrawOnScreen);
 void setUpGame();
 void askToPlayAgain();
 void getPlayerMove(char currentPlayerMark);
