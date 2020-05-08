@@ -4,7 +4,7 @@
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
-namespace GameWinCheckerTests
+namespace GameLogicTests
 {
 	TEST_CLASS(checkIfSymbolHasWon)
 	{
