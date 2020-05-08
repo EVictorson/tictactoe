@@ -12,6 +12,7 @@
 #include <conio.h>
 #include <string>
 #include "GameWinChecker.h"
+#include "GameDataConverter.h"
 
 void playGame();
 void printIntro();
