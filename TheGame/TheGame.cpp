@@ -22,9 +22,12 @@ void setUpGame();
 void askToPlayAgain();
 void getPlayerMove(char playerSymbol);
 bool checkValidMove(int playerMove);
-void checkForWin();
-void printWinningMessage(); // TODO: use draw method to print winning message
-void showMenu(); // TODO: use draw method to show menu
+
+void checkForWin(); // using refactored function
+void displayGameState(char gameState[]); // using refactored function
+
+void printWinningMessage();
+void showMenu();
 void showHighscoreMenu();
 void showCreditsMenu();
 
@@ -344,10 +347,11 @@ void setUpGame()
 	maximumPlayerTurns = gameBoardSize - 1;
 	currentTurn = 1;
 
-	// Reset the gameState by removing all elements from the array
-	//for (int i = 0; i < gameBoardSize; i++) {
-	//	gameState[i] = { };
-	//}
+	// Populate the grid spaces with place holder numbers
+	for (int i = 0; i < gameBoardSize; i++) {
+
+		gameState[i] = gridPositions[i];
+	}
 }
 
 void askToPlayAgain()
