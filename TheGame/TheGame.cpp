@@ -32,7 +32,8 @@ void showHighscoreMenu();
 void showCreditsMenu();
 
 const int gameBoardSize = 10;
-char gameState[gameBoardSize] = { };
+char gridPositions[gameBoardSize] = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9' };
+char gameState[gameBoardSize];
 std::string gameBoard;
 std::string scoreBoard;
 bool gameWon;
