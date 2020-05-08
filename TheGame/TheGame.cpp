@@ -21,7 +21,6 @@ void setUpGame();
 void askToPlayAgain();
 void getPlayerMove(char currentPlayerMark);
 bool checkValidMove(int playerMove);
-void checkForWin();
 
 const int gridSize = 11;
 char gridPositions[gridSize] = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '\0' };
@@ -31,6 +30,9 @@ void printWinningMessage(); // TODO: use draw method to print winning message
 void showMenu(); // TODO: use draw method to show menu
 void showHighscoreMenu();
 void showCreditsMenu();
+
+void checkForWin(); // using refactored function
+void displayGameState(char gameState[]); // using refactored function
 
 const int gameBoardSize = 10;
 char gameState[gameBoardSize] = { };
@@ -326,6 +328,11 @@ void setUpGame() {
   } else {
     system("CLS");
   }
+	// Populate the grid spaces with place holder numbers
+	for (int i = 0; i < gameBoardSize; i++) {
+
+		gameState[i] = gridPositions[i];
+	}
 }
 
 void getPlayerMove(char currentPlayerMark) {
