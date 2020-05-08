@@ -308,7 +308,7 @@ void showCreditsMenu()
 void playGame()
 {
 	setUpGame();
-	draw(convertGameStateToVisualRepresentation(gameState));
+	displayGameState(gameState);
 
 	do
 	{
@@ -324,7 +324,7 @@ void playGame()
 		}
 		
 		getPlayerMove(symbol);
-		draw(convertGameStateToVisualRepresentation(gameState));
+		displayGameState(gameState);
 		checkForWin();
 		if (gameWon) {
 			printWinningMessage();
@@ -405,8 +405,11 @@ void checkForWin()
 	gameWon = gameWinChecker.checkIfSymbolHasWon(symbol, gameState);
 }
 
-
-
+void displayGameState(char gameState[])
+{
+	GameDataConverter gameDataConverter;
+	std::cout << gameDataConverter.convertGameStateToVisualRepresentation(gameState);
+}
 
 void printWinningMessage()
 {
