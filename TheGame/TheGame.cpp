@@ -16,8 +16,7 @@
 void playGame();
 void printIntro();
 void printInstructions();
-std::string convertGameStateToVisualRepresentation(char gameState[]);
-std::string convertScoreToVisualRepresentation(int playerOneScore, int playerTwoScore);
+
 void draw(std::string stringToDrawOnScreen);
 void setUpGame();
 void askToPlayAgain();
@@ -343,20 +342,6 @@ void playGame()
 void draw(std::string stringToDrawOnScreen) {
 	system("CLS");
 	std::cout << stringToDrawOnScreen;
-}
-
-std::string convertScoreToVisualRepresentation(int playerOneScore, int playerTwoScore)
-{
-	scoreBoard = "                         Player 1 [X] vs. Player 2 [O]\n\n                                    " + std::to_string(playerOneScore) + "  -  " + std::to_string(playerTwoScore) + "\n\n";
-	
-	return (scoreBoard);
-}
-
-std::string convertGameStateToVisualRepresentation(char gameState[])
-{
-	gameBoard = "                                     |   |   \n                                    " + std::to_string(1) + " |  " + std::to_string(2) + " |  " + std::to_string(3) + " \n                                  ___|___|___\n                                     |   |   \n                                   " + std::to_string(4) + " | " + std::to_string(5) + " | " + std::to_string(6) + " \n                                  ___|___|___\n                                     |   |   \n                                   " + std::to_string(7) + " | " + std::to_string(8) + " | " + std::to_string(9) + " \n                                     |   |   \n\n";
-
-	return (gameBoard);
 }
 
 void setUpGame()
