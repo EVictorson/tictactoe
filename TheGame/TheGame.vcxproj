@@ -154,10 +154,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="GameDataConverter.cpp" />
     <ClCompile Include="GameWinChecker.cpp" />
     <ClCompile Include="TheGame.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="GameDataConverter.h" />
     <ClInclude Include="GameWinChecker.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
