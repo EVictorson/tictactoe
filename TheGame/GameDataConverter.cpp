@@ -4,7 +4,7 @@ std::string GameDataConverter::convertGameStateToVisualRepresentation(char gameS
 {
 	// Access the value of the array element instead of the ASCII number of the value
 
-	char *pos1 = &gameState[0];
+	char* positions[9];
 
 	/*
 	The string below will be populated either with placeholder numbers if
