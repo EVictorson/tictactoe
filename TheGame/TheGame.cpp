@@ -132,7 +132,7 @@ void showMenu() {
 			validUserInput = true;
 			return;
 		} else {
-			std::cout << "I'm sorry, I don't understand that command. Try again.\n";
+			std::cout << "I'm sorry, I don't understand that command. Try again.\a\n";
 		}
 	}
 }
@@ -367,19 +367,5 @@ void displayGameState(char gameState[])
 {
 	GameDataConverter gameDataConverter;
 	std::cout << gameDataConverter.convertGameStateToVisualRepresentation(gameState);
-}
-
-void printWinningMessage()
-{
-	if (currentTurn % 2 == 1)
-	{
-		std::cout << "> Player 1 wins! [X]\n\n";
-		playerOneScore++;
-	}
-	else
-	{
-		std::cout << "> Player 2 wins! [O]\n\n";
-		playerTwoScore++;
-	}
 }
 
