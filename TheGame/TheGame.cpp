@@ -143,7 +143,7 @@ void showMenu()
 		}
 		else
 		{
-			std::cout << "I'm sorry, I don't understand that command. Try again.\n";
+			std::cout << "I'm sorry, I don't understand that command. Try again.\a\n";
 		}
 	}
 }
@@ -382,7 +382,7 @@ void getPlayerMove(char currentPlayerMark)
 		}
 		else
 		{
-			std::cout << "That spot is already taken! Try again.\n\n";
+			std::cout << "That spot is already taken! Try again.\a\n\n";
 		}
 	}
 }
