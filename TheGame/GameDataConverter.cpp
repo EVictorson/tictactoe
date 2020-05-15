@@ -18,6 +18,10 @@ std::string GameDataConverter::convertGameStateToVisualRepresentation(char gameS
 	                  |   |                             |   |
 	*/
 
+	std::string edgeOfGameBoard = "   |   |\n ";
+	std::string rowSeparator = "___|___|___\n   |   |\n ";
+	std::string columnSeparator = " | ";
+	
 
 
 	std::string gameBoard = R"(
