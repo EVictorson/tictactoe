@@ -23,18 +23,12 @@ std::string GameDataConverter::convertGameStateToVisualRepresentation(char gameS
 	std::string columnSeparator = " | ";
 	
 
+	std::string rowOne = gameState[0] + columnSeparator + gameState[1] + columnSeparator + gameState[2] + "\n";
+	std::string rowTwo = gameState[3] + columnSeparator + gameState[4] + columnSeparator + gameState[5] + "\n";
+	std::string rowThree = gameState[6] + columnSeparator + gameState[7] + columnSeparator + gameState[8] + "\n";
 
-	std::string gameBoard = R"(
-   |   |
- )" + std::to_string(gameState[0]) + " | " + std::to_string(gameState[1]) + " | " + std::to_string(gameState[2]) + R"(
-___|___|___
-   |   |
- )" + std::to_string(gameState[3]) + " | " + std::to_string(gameState[4]) + " | " + std::to_string(gameState[5]) + R"(
-___|___|___
-   |   |
- )" + std::to_string(gameState[6]) + " | " + std::to_string(gameState[7]) + " | " + std::to_string(gameState[8]) + R"(
-   |   |
-)";
+
+	std::string gameBoard = edgeOfGameBoard + rowOne + rowSeparator + rowTwo + rowSeparator + rowThree + edgeOfGameBoard;
 
 	return (gameBoard);
 }
