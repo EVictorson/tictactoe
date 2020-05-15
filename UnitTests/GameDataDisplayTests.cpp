@@ -10,7 +10,7 @@ namespace GameDataDisplayTests
 	{
 	public:
 
-		TEST_METHOD(ExpectSame_GameStateEmpty_PlaceHoldersOnly)
+		TEST_METHOD(ExpectSame_GameStateEmpty_PlaceHoldersOnly) // TODO: rename test
 		{
 			// Arrange
 			std::array <char, 9> gameState = {
@@ -40,7 +40,7 @@ namespace GameDataDisplayTests
 			Assert::AreEqual(expectedGameBoard, gameBoard);
 		}
 
-		TEST_METHOD(ExpectSame_GameStateDraw_NoPlaceholders)
+		TEST_METHOD(ExpectSame_GameStateDraw_NoPlaceholders) // TODO: rename test
 		{
 			// Arrange
 			std::array <char, 9> gameState = {
@@ -69,7 +69,7 @@ namespace GameDataDisplayTests
 			Assert::AreEqual(expectedGameBoard, gameBoard);
 		}
 
-		TEST_METHOD(ExpectSame_GameStateWon_SomePlaceholders)
+		TEST_METHOD(ExpectSame_GameStateWon_SomePlaceholders) // TODO: rename test
 		{
 			// Arrange
 			std::array <char, 9> gameState = {
@@ -98,7 +98,7 @@ namespace GameDataDisplayTests
 			Assert::AreEqual(expectedGameBoard, gameBoard);
 		}
 
-		TEST_METHOD(ExpectSame_GameStateNoWin_SomePlaceholders)
+		TEST_METHOD(ExpectSame_GameStateNoWin_SomePlaceholders) // TODO: rename test
 		{
 			// Arrange
 			std::array <char, 9> gameState = {
