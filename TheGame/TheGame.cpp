@@ -11,6 +11,7 @@
 #include <stdlib.h>
 #include <conio.h>
 #include <string>
+#include <array>
 #include "GameWinChecker.h"
 #include "GameDataConverter.h"
 
@@ -32,8 +33,8 @@ void showHighscoreMenu();
 void showCreditsMenu();
 
 const int gameBoardSize = 9;
-char gridPositions[gameBoardSize] = { '1', '2', '3', '4', '5', '6', '7', '8', '9' };
-char gameState[gameBoardSize];
+std::array<char, gameBoardSize> gridPositions = { '1', '2', '3', '4', '5', '6', '7', '8', '9' };
+std::array <char, gameBoardSize> gameState;
 std::string gameBoard;
 std::string scoreBoard;
 bool gameWon;
