@@ -33,8 +33,6 @@ void showMenu();
 void showHighscoreMenu();
 void showCreditsMenu();
 
-
-// std::array<char, gameBoardSize> gridPositions { '1', '2', '3', '4', '5', '6', '7', '8', '9' };
 std::array <char, gameBoardSize> gameState;
 std::string gameBoard;
 std::string scoreBoard;
