@@ -17,7 +17,7 @@ namespace GameDataDisplayTests
 				'1', '2', '3',
 				'4', '5', '6',
 				'7', '8', '9',
-				'\0' };
+				};
 
 			std::string expectedGameBoard = R"(
 			   |   |
@@ -47,7 +47,7 @@ namespace GameDataDisplayTests
 				'X', 'O', 'X',
 				'X', 'X', 'O',
 				'O', 'X', 'O',
-				'\0' };
+				};
 
 			std::string expectedGameBoard = R"(
 			   |   |
@@ -76,7 +76,7 @@ namespace GameDataDisplayTests
 				'X', '2', '3',
 				'O', 'O', '6',
 				'X', 'X', 'X',
-				'\0' };
+				};
 
 			std::string expectedGameBoard = R"(
 			   |   |
@@ -105,7 +105,7 @@ namespace GameDataDisplayTests
 				'X', '2', 'O',
 				'O', '5', '6',
 				'7', '8', 'X',
-				'\0' };
+				};
 
 			std::string expectedGameBoard = R"(
 			   |   |
