@@ -33,7 +33,7 @@ void showHighscoreMenu();
 void showCreditsMenu();
 
 const int gameBoardSize = 9;
-std::array<char, gameBoardSize> gridPositions = { '1', '2', '3', '4', '5', '6', '7', '8', '9' };
+// std::array<char, gameBoardSize> gridPositions { '1', '2', '3', '4', '5', '6', '7', '8', '9' };
 std::array <char, gameBoardSize> gameState;
 std::string gameBoard;
 std::string scoreBoard;
@@ -350,10 +350,10 @@ void setUpGame()
 	currentTurn = 1;
 
 	// Populate the grid spaces with place holder numbers
-	for (int i = 0; i < gameBoardSize; i++) {
+	//for (int i = 0; i < gameBoardSize; i++) {
 
-		gameState[i] = gridPositions[i];
-	}
+	//	gameState[i] = gridPositions[i];
+	//}
 }
 
 void askToPlayAgain()
