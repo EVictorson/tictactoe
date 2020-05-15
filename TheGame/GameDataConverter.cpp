@@ -2,10 +2,6 @@
 
 std::string GameDataConverter::convertGameStateToVisualRepresentation(char gameState[])
 {
-	// Access the value of the array element instead of the ASCII number of the value
-
-	char* positions[9];
-
 	/*
 	The string below will be populated either with placeholder numbers if
 	no moves have been made or the symbol of a player who has made a move,
