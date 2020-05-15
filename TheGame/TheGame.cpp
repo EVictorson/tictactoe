@@ -25,7 +25,7 @@ void getPlayerMove(char playerSymbol);
 bool checkValidMove(int playerMove);
 
 void checkForWin(); // using refactored function
-void displayGameState(char gameState[]); // using refactored function
+void displayGameState(std::array <char, gameBoardSize> gameState); // using refactored function
 
 void printWinningMessage();
 void showMenu();
@@ -406,7 +406,7 @@ void checkForWin()
 	gameWon = gameWinChecker.checkIfSymbolHasWon(symbol, gameState);
 }
 
-void displayGameState(char gameState[])
+void displayGameState(std::array <char, gameBoardSize> gameState)
 {
 	GameDataConverter gameDataConverter;
 	std::cout << gameDataConverter.convertGameStateToVisualRepresentation(gameState);
