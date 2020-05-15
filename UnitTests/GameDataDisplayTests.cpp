@@ -19,17 +19,7 @@ namespace GameDataDisplayTests
 				'7', '8', '9',
 				};
 
-			std::string expectedGameBoard = R"(
-			   |   |
-			 1 | 2 | 3
-			___|___|___
-			   |   |
-			 4 | 5 | 6
-			___|___|___
-			   |   |
-			 7 | 8 | 9
-			   |   |
-			)";
+			std::string expectedGameBoard = "   |   |\n 1 | 2 | 3\n___|___|___\n   |   |\n 4 | 5 | 6\n___|___|___\n   |   |\n 7 | 8 | 9\n   |   |\n ";
 
 			// Act
 			GameDataConverter gameDataConverter;
@@ -49,17 +39,7 @@ namespace GameDataDisplayTests
 				'O', 'X', 'O',
 				};
 
-			std::string expectedGameBoard = R"(
-			   |   |
-			 X | O | X
-			___|___|___
-			   |   |
-			 X | X | O
-			___|___|___
-			   |   |
-			 O | X | O
-			   |   |
-			)";
+			std::string expectedGameBoard = "   |   |\n X | O | X\n___|___|___\n   |   |\n X | X | O\n___|___|___\n   |   |\n O | X | O\n   |   |\n ";
 
 			// Act
 			GameDataConverter gameDataConverter;
@@ -78,17 +58,7 @@ namespace GameDataDisplayTests
 				'X', 'X', 'X',
 				};
 
-			std::string expectedGameBoard = R"(
-			   |   |
-			 X | 2 | 3
-			___|___|___
-			   |   |
-			 O | O | 6
-			___|___|___
-			   |   |
-			 X | X | X
-			   |   |
-			)";
+			std::string expectedGameBoard = "   |   |\n X | 2 | 3\n___|___|___\n   |   |\n O | O | 6\n___|___|___\n   |   |\n X | X | X\n   |   |\n ";
 
 			// Act
 			GameDataConverter gameDataConverter;
@@ -107,17 +77,7 @@ namespace GameDataDisplayTests
 				'7', '8', 'X',
 				};
 
-			std::string expectedGameBoard = R"(
-			   |   |
-			 X | 2 | O
-			___|___|___
-			   |   |
-			 O | 5 | 6
-			___|___|___
-			   |   |
-			 7 | 8 | X
-			   |   |
-			)";
+			std::string expectedGameBoard = "   |   |\n X | 2 | O\n___|___|___\n   |   |\n O | 5 | 6\n___|___|___\n   |   |\n 7 | 8 | X\n   |   |\n ";
 
 			// Act
 			GameDataConverter gameDataConverter;
