@@ -18,7 +18,7 @@ namespace GameLogicTests
 				'1', 'O', '3',
 				'X', 'X', 'X',
 				'7', '8', 'O',
-				'\0' };
+				};
 
 			// Act
 			GameWinChecker gameWinChecker;
@@ -36,7 +36,7 @@ namespace GameLogicTests
 				'O', 'X', '3',
 				'4', 'X', '6',
 				'O', 'X', '9',
-				'\0' };
+				};
 
 			// Act
 			GameWinChecker gameWinChecker;
@@ -54,7 +54,7 @@ namespace GameLogicTests
 				'X', '2', '3',
 				'O', 'X', '6',
 				'X', 'O', 'X',
-				'\0' };
+				};
 
 			// Act
 			GameWinChecker gameWinChecker;
@@ -72,7 +72,7 @@ namespace GameLogicTests
 				'1', '2', '3',
 				'4', '5', '6',
 				'7', '8', '9',
-				'\0'};
+				};
 
 			// Act
 			GameWinChecker gameWinChecker;
@@ -91,7 +91,7 @@ namespace GameLogicTests
 				'X', 'O', 'X',
 				'X', 'X', 'O',
 				'O', 'X', 'O',
-				'\0' };
+				};
 
 			// Act
 			GameWinChecker gameWinChecker;
@@ -109,7 +109,7 @@ namespace GameLogicTests
 				'X', '2', '3',
 				'4', 'O', '6',
 				'7', '8', '9',
-				'\0' };
+				};
 
 			// Act
 			GameWinChecker gameWinChecker;
@@ -127,7 +127,7 @@ namespace GameLogicTests
 				'X', '2', '3',
 				'O', 'X', '6',
 				'X', 'O', 'X',
-				'\0' };
+				};
 
 			// Act
 			GameWinChecker gameWinChecker;
