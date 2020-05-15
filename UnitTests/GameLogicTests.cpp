@@ -137,28 +137,4 @@ namespace GameLogicTests
 			Assert::IsFalse(gameWon, L"More information here...");
 		}
 
-		/*TEST_METHOD(Failing_Test)
-		{
-			bool myBool = false;
-
-			Assert::IsTrue(myBool, L"This test is intended to fail.");
-		}*/
-
 	};
-
-	//TEST_CLASS(MoveValidator)
-	//{
-	//public:
-
-	//	TEST_METHOD(validatePlayerMove)
-	//	{
-	//		Assert::IsTrue(false);
-	//	}
-	//};
-}
-
-/* Note to Self:
-You will only be able to unit test public functions this way.
-To unit test private functions, you must write your unit tests
-in the same class as the code that is being tested.
-*/
