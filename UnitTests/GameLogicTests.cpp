@@ -9,7 +9,7 @@ namespace GameLogicTests
 	TEST_CLASS(checkIfSymbolHasWon)
 	{
 	public:
-		
+
 		TEST_METHOD(ExpectWon_SymbolFillsHorizontalRow_WinningSymbol)
 		{
 			// Arrange
@@ -18,7 +18,7 @@ namespace GameLogicTests
 				'1', 'O', '3',
 				'X', 'X', 'X',
 				'7', '8', 'O',
-				};
+			};
 
 			// Act
 			GameWinChecker gameWinChecker;
@@ -36,7 +36,7 @@ namespace GameLogicTests
 				'O', 'X', '3',
 				'4', 'X', '6',
 				'O', 'X', '9',
-				};
+			};
 
 			// Act
 			GameWinChecker gameWinChecker;
@@ -54,7 +54,7 @@ namespace GameLogicTests
 				'X', '2', '3',
 				'O', 'X', '6',
 				'X', 'O', 'X',
-				};
+			};
 
 			// Act
 			GameWinChecker gameWinChecker;
@@ -72,7 +72,7 @@ namespace GameLogicTests
 				'1', '2', '3',
 				'4', '5', '6',
 				'7', '8', '9',
-				};
+			};
 
 			// Act
 			GameWinChecker gameWinChecker;
@@ -91,7 +91,7 @@ namespace GameLogicTests
 				'X', 'O', 'X',
 				'X', 'X', 'O',
 				'O', 'X', 'O',
-				};
+			};
 
 			// Act
 			GameWinChecker gameWinChecker;
@@ -109,7 +109,7 @@ namespace GameLogicTests
 				'X', '2', '3',
 				'4', 'O', '6',
 				'7', '8', '9',
-				};
+			};
 
 			// Act
 			GameWinChecker gameWinChecker;
@@ -118,7 +118,7 @@ namespace GameLogicTests
 			// Assert
 			Assert::IsFalse(gameWon, L"More information here...");
 		}
-		// Name formula: Expect[Outcome]_GameState[condition]_Symbol[condition]
+		
 		TEST_METHOD(ExpectNotWon_GameStateContainsWin_SymbolIsNotWinningSymbol)
 		{
 			// Arrange
@@ -127,7 +127,7 @@ namespace GameLogicTests
 				'X', '2', '3',
 				'O', 'X', '6',
 				'X', 'O', 'X',
-				};
+			};
 
 			// Act
 			GameWinChecker gameWinChecker;
@@ -138,3 +138,4 @@ namespace GameLogicTests
 		}
 
 	};
+}
