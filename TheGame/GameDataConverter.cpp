@@ -26,7 +26,7 @@ std::string GameDataConverter::convertGameStateToVisualRepresentation(std::array
 
 	std::array <char, 9> gameBoardPosition;
 
-	for (int i = 0; i < gameBoardPosition.size();; i++)
+	for (int i = 0; i < gameBoardPosition.size(); i++)
 	{
 		if (gameState[i] != '\0')
 		{
