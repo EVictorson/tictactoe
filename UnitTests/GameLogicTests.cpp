@@ -14,7 +14,7 @@ namespace GameLogicTests
 		{
 			// Arrange
 			char symbol = 'X';
-			char gameState[] = {
+			std::array<char, 9> gameState = {
 				'1', 'O', '3',
 				'X', 'X', 'X',
 				'7', '8', 'O',
@@ -32,7 +32,7 @@ namespace GameLogicTests
 		{
 			// Arrange
 			char symbol = 'X';
-			char gameState[] = {
+			std::array<char, 9> gameState = {
 				'O', 'X', '3',
 				'4', 'X', '6',
 				'O', 'X', '9',
@@ -50,7 +50,7 @@ namespace GameLogicTests
 		{
 			// Arrange
 			char symbol = 'X';
-			char gameState[] = {
+			std::array<char, 9> gameState = {
 				'X', '2', '3',
 				'O', 'X', '6',
 				'X', 'O', 'X',
@@ -68,7 +68,7 @@ namespace GameLogicTests
 		{
 			// Arrange
 			char symbol = 'X';
-			char gameState[] = {
+			std::array<char, 9> gameState = {
 				'1', '2', '3',
 				'4', '5', '6',
 				'7', '8', '9',
@@ -87,7 +87,7 @@ namespace GameLogicTests
 		{
 			// Arrange
 			char symbol = 'X';
-			char gameState[] = {
+			std::array<char, 9> gameState = {
 				'X', 'O', 'X',
 				'X', 'X', 'O',
 				'O', 'X', 'O',
@@ -105,7 +105,7 @@ namespace GameLogicTests
 		{
 			// Arrange
 			char symbol = 'X';
-			char gameState[] = {
+			std::array<char, 9> gameState = {
 				'X', '2', '3',
 				'4', 'O', '6',
 				'7', '8', '9',
@@ -123,7 +123,7 @@ namespace GameLogicTests
 		{
 			// Arrange
 			char symbol = 'O';
-			char gameState[] = {
+			std::array<char, 9> gameState = {
 				'X', '2', '3',
 				'O', 'X', '6',
 				'X', 'O', 'X',
