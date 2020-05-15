@@ -1,6 +1,6 @@
 #include "GameDataConverter.h"
 
-std::string GameDataConverter::convertGameStateToVisualRepresentation(char gameState[])
+std::string GameDataConverter::convertGameStateToVisualRepresentation(std::array <char, 9> gameState)
 {
 	/*
 	The string below will be populated either with placeholder numbers if

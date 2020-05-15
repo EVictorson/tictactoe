@@ -13,7 +13,7 @@ namespace GameDataDisplayTests
 		TEST_METHOD(ExpectSame_GameStateEmpty_PlaceHoldersOnly)
 		{
 			// Arrange
-			char gameState[] = {
+			std::array <char, 9> gameState = {
 				'1', '2', '3',
 				'4', '5', '6',
 				'7', '8', '9',
@@ -43,7 +43,7 @@ namespace GameDataDisplayTests
 		TEST_METHOD(ExpectSame_GameStateDraw_NoPlaceholders)
 		{
 			// Arrange
-			char gameState[] = {
+			std::array <char, 9> gameState = {
 				'X', 'O', 'X',
 				'X', 'X', 'O',
 				'O', 'X', 'O',
@@ -72,7 +72,7 @@ namespace GameDataDisplayTests
 		TEST_METHOD(ExpectSame_GameStateWon_SomePlaceholders)
 		{
 			// Arrange
-			char gameState[] = {
+			std::array <char, 9> gameState = {
 				'X', '2', '3',
 				'O', 'O', '6',
 				'X', 'X', 'X',
@@ -101,7 +101,7 @@ namespace GameDataDisplayTests
 		TEST_METHOD(ExpectSame_GameStateNoWin_SomePlaceholders)
 		{
 			// Arrange
-			char gameState[] = {
+			std::array <char, 9> gameState = {
 				'X', '2', 'O',
 				'O', '5', '6',
 				'7', '8', 'X',
