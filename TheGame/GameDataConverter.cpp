@@ -21,11 +21,26 @@ std::string GameDataConverter::convertGameStateToVisualRepresentation(std::array
 	std::string edgeOfGameBoard = "   |   |\n ";
 	std::string rowSeparator = "___|___|___\n   |   |\n ";
 	std::string columnSeparator = " | ";
-	
 
-	std::string rowOne = gameState[0] + columnSeparator + gameState[1] + columnSeparator + gameState[2] + "\n";
-	std::string rowTwo = gameState[3] + columnSeparator + gameState[4] + columnSeparator + gameState[5] + "\n";
-	std::string rowThree = gameState[6] + columnSeparator + gameState[7] + columnSeparator + gameState[8] + "\n";
+	// if position x contains a symbol, print the symbol, else print the placeholder value.
+
+	std::array <char, 9> gameBoardPosition;
+
+	for (int i = 0; i < gameBoardPosition.size();; i++)
+	{
+		if (gameState[i] != '\0')
+		{
+			gameBoardPosition[i] = gameState[i];
+		}
+		else
+		{
+			gameBoardPosition[i] = (i + 1);
+		}
+	}
+
+	std::string rowOne = gameBoardPosition[0] + columnSeparator + gameBoardPosition[1] + columnSeparator + gameBoardPosition[2] + "\n";
+	std::string rowTwo = gameBoardPosition[3] + columnSeparator + gameBoardPosition[4] + columnSeparator + gameBoardPosition[5] + "\n";
+	std::string rowThree = gameBoardPosition[6] + columnSeparator + gameBoardPosition[7] + columnSeparator + gameBoardPosition[8] + "\n";
 
 
 	std::string gameBoard = edgeOfGameBoard + rowOne + rowSeparator + rowTwo + rowSeparator + rowThree + edgeOfGameBoard;
