@@ -298,7 +298,7 @@ void playGame() {
 		} else {
 			currentTurn++;
 		}
-	} while (currentTurn != maximumPlayerTurns && !gameWon);
+	} while (currentTurn != maximumPlayerTurns + 1 && !gameWon);
 
 	if (!gameWon) {
 		std::cout << "\nIt's a draw! Better luck next time...\n\n";
