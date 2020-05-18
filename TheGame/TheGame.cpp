@@ -22,8 +22,7 @@ void printInstructions();
 
 void setUpGame();
 void askToPlayAgain();
-void getPlayerMove(char playerSymbol);
-//bool checkValidMove(int playerMove);
+void getPlayerMove(char playerSymbol); // using refactored function
 
 bool horizontalWin, verticalWin, diagonalWin, gameWon;
 void checkForWin(); // using refactored function
@@ -365,15 +364,6 @@ void printWinningMessage() {
     playerTwoScore++;
   }
 }
-//
-//bool checkValidMove(int playerMove) {
-//	if (playerMove >= 0 && playerMove < 10 && gameState[playerMove-1] == 'X' ||
-//	    playerMove >= 0 && playerMove < 10 && gameState[playerMove-1] == 'O') {
-//		return false;
-//	} else {
-//		return true;
-//	}
-//}
 
 void checkForWin() {
 	GameWinChecker gameWinChecker;
