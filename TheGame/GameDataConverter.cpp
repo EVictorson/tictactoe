@@ -30,9 +30,9 @@ std::string GameDataConverter::convertGameStateToVisualRepresentation(std::array
 	*/
 	for (int index = 0; index < 9; index++)
 	{
-		if (gameState[i] != '\0')
+		if (gameState[index] != '\0')
 		{
-			gameBoardPosition[i] = gameState[i];
+			displayData[index] = gameState[index];
 		}
 		else
 		{
