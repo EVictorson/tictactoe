@@ -362,7 +362,8 @@ void askToPlayAgain()
 	std::cout << "Do you want to play again? Y/N...\n";
 	std::cin >> playerAnswer;
 
-	if (playerAnswer == 'y' || playerAnswer == 'Y') {
+	if (playerAnswer == 'y' || playerAnswer == 'Y')
+	{
 		playGame();
 	}
 	else {
