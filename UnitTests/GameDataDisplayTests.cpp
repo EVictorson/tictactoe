@@ -49,8 +49,8 @@ namespace GameDataDisplayTests
 		{
 			// Arrange
 			std::array <char, 9> gameState = {
-				'X', '2', '3',
-				'O', 'O', '6',
+				'X', '\0', '\0',
+				'O', 'O', '\0',
 				'X', 'X', 'X',
 				};
 
@@ -68,9 +68,9 @@ namespace GameDataDisplayTests
 		{
 			// Arrange
 			std::array <char, 9> gameState = {
-				'X', '2', 'O',
-				'O', '5', '6',
-				'7', '8', 'X',
+				'X', '\0', 'O',
+				'O', '\0', '\0',
+				'\0', '\0', 'X',
 				};
 
 			std::string expectedGameBoard = "   |   |\n X | 2 | O\n___|___|___\n   |   |\n O | 5 | 6\n___|___|___\n   |   |\n 7 | 8 | X\n   |   |\n ";
