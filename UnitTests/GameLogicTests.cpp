@@ -1,6 +1,7 @@
 #include "pch.h"
 #include "CppUnitTest.h"
 #include "../TheGame/GameWinChecker.h"
+#include "../TheGame/MoveValidator.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
