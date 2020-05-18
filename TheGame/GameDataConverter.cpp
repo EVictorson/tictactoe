@@ -22,11 +22,13 @@ std::string GameDataConverter::convertGameStateToVisualRepresentation(std::array
 	std::string rowSeparator = "___|___|___\n   |   |\n ";
 	std::string columnSeparator = " | ";
 
-	// if position x contains a symbol, print the symbol, else print the placeholder value.
 
 	std::array <char, 9> displayData{};
 
-	for (int i = 0; i < gameBoardPosition.size(); i++)
+	/* If the gameState contains a symbol in any position, assign that symbol to
+	the corresponding position in the display data array, or assign a placeholder number.
+	*/
+	for (int index = 0; index < 9; index++)
 	{
 		if (gameState[i] != '\0')
 		{
@@ -38,13 +40,13 @@ std::string GameDataConverter::convertGameStateToVisualRepresentation(std::array
 		}
 	}
 
-	std::string rowOne = gameBoardPosition[0] + columnSeparator + gameBoardPosition[1] + columnSeparator + gameBoardPosition[2] + "\n";
-	std::string rowTwo = gameBoardPosition[3] + columnSeparator + gameBoardPosition[4] + columnSeparator + gameBoardPosition[5] + "\n";
-	std::string rowThree = gameBoardPosition[6] + columnSeparator + gameBoardPosition[7] + columnSeparator + gameBoardPosition[8] + "\n";
-
-
+	// Create strings for each row from the display data
+	std::string rowOne = displayData[0] + columnSeparator + displayData[1] + columnSeparator + displayData[2] + "\n";
+	std::string rowTwo = displayData[3] + columnSeparator + displayData[4] + columnSeparator + displayData[5] + "\n";
+	std::string rowThree = displayData[6] + columnSeparator + displayData[7] + columnSeparator + displayData[8] + "\n";
+	
+	// Create one gameboard string from all row strings and return it to be printed to the SO
 	std::string gameBoard = edgeOfGameBoard + rowOne + rowSeparator + rowTwo + rowSeparator + rowThree + edgeOfGameBoard;
-
 	return (gameBoard);
 }
 
