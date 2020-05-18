@@ -22,8 +22,7 @@ void printInstructions();
 
 void setUpGame();
 void askToPlayAgain();
-void getPlayerMove(char playerSymbol);
-//bool checkValidMove(int playerMove);
+void getPlayerMove(char playerSymbol); // using refactored function
 
 void checkForWin(); // using refactored function
 const int gameBoardSize = 9;
@@ -392,18 +391,6 @@ void getPlayerMove(char playerSymbol)
 		}
 	}
 }
-
-//bool checkValidMove(int playerMove)
-//{
-//	if (playerMove >= 0 && playerMove < 10 && gameState[playerMove-1] == 'X' || playerMove >= 0 && playerMove < 10 && gameState[playerMove-1] == 'O')
-//	{
-//		return false;
-//	}
-//	else
-//	{
-//		return true;
-//	}
-//}
 
 void checkForWin()
 {
