@@ -13,7 +13,7 @@ namespace GameDataDisplayTests
 		TEST_METHOD(ExpectSame_GameStateEmpty_PlaceHoldersOnly) // TODO: rename test
 		{
 			// Arrange
-			std::array <char, 9> gameState;
+			std::array <char, 9> gameState{ '\0' };
 
 			std::string expectedGameBoard = "   |   |\n 1 | 2 | 3\n___|___|___\n   |   |\n 4 | 5 | 6\n___|___|___\n   |   |\n 7 | 8 | 9\n   |   |\n ";
 
