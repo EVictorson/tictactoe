@@ -134,4 +134,59 @@ namespace GameLogicTests
 		}
 
 	};
+
+	TEST_CLASS(checkIfMoveIsValid)
+	{
+	public:
+
+		TEST_METHOD(ExpectValid_GameStateEmpty)
+		{
+			// Arrange
+			int playerMove = 4;
+			std::array<char, 9> gameState { };
+
+			// Act
+			MoveValidator moveValidator;
+			bool moveIsValid = moveValidator.checkIfMoveIsValid(playerMove, gameState);
+
+			// Assert
+			Assert::IsTrue(moveIsValid, L"More information here...");
+		}
+
+		TEST_METHOD(ExpectValid_GameStateNoWin_SomeMovesMade)
+		{
+			// Arrange
+			int playerMove = 4;
+			std::array<char, 9> gameState = {
+				'X', '\0', '\0',
+				'\0', 'O', '\0',
+				'\0', '\0', '\0'
+			};
+
+			// Act
+			MoveValidator moveValidator;
+			bool moveIsValid = moveValidator.checkIfMoveIsValid(playerMove, gameState);
+
+			// Assert
+			Assert::IsTrue(moveIsValid, L"More information here...");
+		}
+
+		TEST_METHOD(ExpectInvalid_GameStateNoWin_SomeMovesMade)
+		{
+			// Arrange
+			int playerMove = 1;
+			std::array<char, 9> gameState = {
+				'X', '\0', '\0',
+				'\0', 'O', '\0',
+				'\0', '\0', '\0'
+			};
+
+			// Act
+			MoveValidator moveValidator;
+			bool moveIsValid = moveValidator.checkIfMoveIsValid(playerMove, gameState);
+
+			// Assert
+			Assert::IsFalse(moveIsValid, L"More information here...");
+		}
+	};
 }
