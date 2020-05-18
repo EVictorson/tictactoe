@@ -156,11 +156,13 @@
   <ItemGroup>
     <ClCompile Include="GameDataConverter.cpp" />
     <ClCompile Include="GameWinChecker.cpp" />
+    <ClCompile Include="MoveValidator.cpp" />
     <ClCompile Include="TheGame.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameDataConverter.h" />
     <ClInclude Include="GameWinChecker.h" />
+    <ClInclude Include="MoveValidator.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
