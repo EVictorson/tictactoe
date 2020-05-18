@@ -21,8 +21,13 @@ void printInstructions();
 
 void setUpGame();
 void askToPlayAgain();
+<<<<<<< HEAD
 void getPlayerMove(char currentPlayerMark);
 bool checkValidMove(int playerMove);
+=======
+void getPlayerMove(char playerSymbol);
+//bool checkValidMove(int playerMove);
+>>>>>>> Comment out old move validation code in main
 
 bool horizontalWin, verticalWin, diagonalWin, gameWon;
 void checkForWin(); // using refactored function
@@ -351,15 +356,6 @@ void getPlayerMove(char currentPlayerMark) {
 	}
 }
 
-bool checkValidMove(int playerMove) {
-  if (playerMove > 0 && playerMove < 10 && gridLabels[playerMove] == 'X' ||
-      playerMove > 0 && playerMove < 10 && gridLabels[playerMove] == 'O') {
-    std::cout << "That doesn't seem right. Try again.\n";
-    return false;
-  } else {
-    return true;
-  }
-
 void printWinningMessage() {
   if (currentTurn % 2 == 1) {
     std::cout << "> Player 1 wins! [X]\n\n";
@@ -369,6 +365,15 @@ void printWinningMessage() {
     playerTwoScore++;
   }
 }
+//
+//bool checkValidMove(int playerMove) {
+//	if (playerMove >= 0 && playerMove < 10 && gameState[playerMove-1] == 'X' ||
+//	    playerMove >= 0 && playerMove < 10 && gameState[playerMove-1] == 'O') {
+//		return false;
+//	} else {
+//		return true;
+//	}
+//}
 
 void checkForWin() {
 	GameWinChecker gameWinChecker;
