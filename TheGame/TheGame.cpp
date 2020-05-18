@@ -345,7 +345,7 @@ void playGame()
 
 void setUpGame()
 {
-	maximumPlayerTurns = gameBoardSize - 1;
+	maximumPlayerTurns = gameBoardSize;
 	currentTurn = 1;
 
 	// Populate the grid spaces with place holder numbers
