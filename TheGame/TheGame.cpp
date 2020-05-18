@@ -22,13 +22,8 @@ void printInstructions();
 
 void setUpGame();
 void askToPlayAgain();
-<<<<<<< HEAD
-void getPlayerMove(char currentPlayerMark);
-bool checkValidMove(int playerMove);
-=======
 void getPlayerMove(char playerSymbol);
 //bool checkValidMove(int playerMove);
->>>>>>> Comment out old move validation code in main
 
 bool horizontalWin, verticalWin, diagonalWin, gameWon;
 void checkForWin(); // using refactored function
@@ -343,13 +338,16 @@ void askToPlayAgain()
 	}
 }
 
-void getPlayerMove(char currentPlayerMark) {
-	bool validMove = false;
-	while (!validMove) {
+void getPlayerMove(char playerSymbol) {
+	bool moveAccepted = false;
+	MoveValidator moveValidator;
+
+	while (!moveAccepted) {
 		std::cin >> playerMove;
-		if (checkValidMove(playerMove)) {
-			validMove = true;
-			gameState[playerMove-1] = currentPlayerMark;
+		bool moveIsValid = moveValidator.checkIfMoveIsValid(playerMove, gameState);
+		if (moveIsValid) {
+			moveAccepted = true;
+			gameState[playerMove-1] = playerSymbol;
 			break;
 		} else {
 			std::cout << "That spot is already taken! Try again.\n\n";
