@@ -14,6 +14,7 @@
 #include <array>
 #include "GameWinChecker.h"
 #include "GameDataConverter.h"
+#include "MoveValidator.h"
 
 void playGame();
 void printIntro();
