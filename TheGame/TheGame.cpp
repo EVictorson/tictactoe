@@ -308,7 +308,7 @@ void playGame() {
 }
 
 void setUpGame() {
-	maximumPlayerTurns = gameBoardSize - 1;
+	maximumPlayerTurns = gameBoardSize;
 	currentTurn = 1;
 
   if (playerAnswer == 'y' || playerAnswer == 'Y') {
