@@ -130,7 +130,7 @@ void showMenu() {
 			validUserInput = true;
 			return;
 		} else {
-			std::cout << "I'm sorry, I don't understand that command. Try again.\a\n";
+			std::cout << "I'm sorry, I don't understand that command. Try again.\n";
 		}
 	}
 }
@@ -301,7 +301,7 @@ void playGame() {
 	} while (currentTurn < maximumPlayerTurns && !gameWon);
 
 	if (!gameWon) {
-		std::cout << "It's a draw! Better luck next time...\n\n";
+		std::cout << "\nIt's a draw! Better luck next time...\n\n";
 	}
 
 	askToPlayAgain();
@@ -323,18 +323,32 @@ void setUpGame() {
 	//}
 }
 
+void askToPlayAgain()
+{
+	char playerAnswer;
+	std::cout << "Do you want to play again? Y/N...\n";
+	std::cin >> playerAnswer;
+
+	if (playerAnswer == 'y' || playerAnswer == 'Y') {
+		playGame();
+	}
+	else {
+		system("CLS");
+	}
+}
+
 void getPlayerMove(char currentPlayerMark) {
-  bool validMove = false;
-  while (!validMove) {
-    std::cin >> playerMove;
-    if (checkValidMove(playerMove)) {
-      validMove = true;
-      gridLabels[playerMove] = currentPlayerMark;
-      break;
-    } else {
-      std::cout << "           That spot is already taken! Try again.\n\n";
-    }
-  }
+	bool validMove = false;
+	while (!validMove) {
+		std::cin >> playerMove;
+		if (checkValidMove(playerMove)) {
+			validMove = true;
+			gameState[playerMove-1] = currentPlayerMark;
+			break;
+		} else {
+			std::cout << "That spot is already taken! Try again.\n\n";
+		}
+	}
 }
 
 bool checkValidMove(int playerMove) {
