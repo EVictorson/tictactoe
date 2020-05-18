@@ -68,11 +68,7 @@ namespace GameLogicTests
 		{
 			// Arrange
 			char symbol = 'X';
-			std::array<char, 9> gameState = {
-				'1', '2', '3',
-				'4', '5', '6',
-				'7', '8', '9',
-			};
+			std::array<char, 9> gameState = { };
 
 			// Act
 			GameWinChecker gameWinChecker;

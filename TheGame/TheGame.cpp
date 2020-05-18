@@ -34,7 +34,7 @@ void showMenu(); // TODO: use draw method to show menu
 void showHighscoreMenu();
 void showCreditsMenu();
 
-std::array <char, gameBoardSize> gameState;
+std::array <char, gameBoardSize> gameState { };
 std::string gameBoard;
 std::string scoreBoard;
 int playerMove;
