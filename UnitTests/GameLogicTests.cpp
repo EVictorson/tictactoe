@@ -69,7 +69,7 @@ namespace GameLogicTests
 		{
 			// Arrange
 			char symbol = 'X';
-			std::array<char, 9> gameState = { };
+			std::array<char, 9> gameState { };
 
 			// Act
 			GameWinChecker gameWinChecker;
@@ -175,11 +175,11 @@ namespace GameLogicTests
 		TEST_METHOD(ExpectInvalid_GameStateNoWin_SomeMovesMade)
 		{
 			// Arrange
-			int playerMove = 1;
+			int playerMove = 5;
 			std::array<char, 9> gameState = {
-				'X', '\0', '\0',
+				'X', '\0', 'O',
 				'\0', 'O', '\0',
-				'\0', '\0', '\0'
+				'\0', 'X', '\0'
 			};
 
 			// Act
