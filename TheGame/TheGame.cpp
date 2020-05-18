@@ -370,15 +370,19 @@ void askToPlayAgain()
 	}
 }
 
-void getPlayerMove(char currentPlayerMark)
+void getPlayerMove(char playerSymbol)
 {
-	bool validMove = false;
-	while (!validMove) {
+	bool moveAccepted = false;
+	MoveValidator moveValidator;
+
+	while (!moveAccepted)
+	{
 		std::cin >> playerMove;
-		if (checkValidMove(playerMove))
+		bool moveIsValid = moveValidator.checkIfMoveIsValid(playerMove, gameState);
+		if (moveIsValid)
 		{
-			validMove = true;
-			gameState[playerMove-1] = currentPlayerMark;
+			moveAccepted = true;
+			gameState[playerMove-1] = playerSymbol;
 			break;
 		}
 		else
