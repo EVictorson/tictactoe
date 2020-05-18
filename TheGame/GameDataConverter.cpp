@@ -36,7 +36,35 @@ std::string GameDataConverter::convertGameStateToVisualRepresentation(std::array
 		}
 		else
 		{
-			gameBoardPosition[i] = (i + 1);
+			switch (index)
+			{
+			case 0:
+				displayData[index] = '1';
+				break;
+			case 1:
+				displayData[index] = '2';
+				break;
+			case 2:
+				displayData[index] = '3';
+				break;
+			case 3:
+				displayData[index] = '4';
+				break;
+			case 4:
+				displayData[index] = '5';
+				break;
+			case 5:
+				displayData[index] = '6';
+				break;
+			case 6:
+				displayData[index] = '7';
+				break;
+			case 7:
+				displayData[index] = '8';
+				break;
+			case 8:
+				displayData[index] = '9';
+			}
 		}
 	}
 
