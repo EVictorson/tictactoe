@@ -363,6 +363,7 @@ void checkForWin() {
 
 void displayGameState(std::array <char, gameBoardSize> gameState)
 {
+	system("CLS");
 	GameDataConverter gameDataConverter;
 	std::cout << gameDataConverter.convertGameStateToVisualRepresentation(gameState);
 }
