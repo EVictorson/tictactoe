@@ -24,7 +24,7 @@ std::string GameDataConverter::convertGameStateToVisualRepresentation(std::array
 
 	// if position x contains a symbol, print the symbol, else print the placeholder value.
 
-	std::array <char, gameState.size()> gameBoardPosition;
+	std::array <char, 9> displayData{};
 
 	for (int i = 0; i < gameBoardPosition.size(); i++)
 	{

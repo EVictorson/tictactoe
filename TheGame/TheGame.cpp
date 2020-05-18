@@ -33,7 +33,7 @@ void showMenu();
 void showHighscoreMenu();
 void showCreditsMenu();
 
-std::array <char, gameBoardSize> gameState;
+std::array <char, gameBoardSize> gameState { };
 std::string gameBoard;
 std::string scoreBoard;
 bool gameWon;
