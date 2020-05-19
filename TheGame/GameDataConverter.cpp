@@ -23,7 +23,7 @@ std::string GameDataConverter::convertGameStateToVisualRepresentation(std::array
 	std::string columnSeparator = " | ";
 
 
-	std::array <char, 9> displayData{};
+	std::array <std::string, 9> displayData{};
 
 	/* If the gameState contains a symbol in any position, assign that symbol to
 	the corresponding position in the display data array, or assign a placeholder number.
@@ -36,35 +36,7 @@ std::string GameDataConverter::convertGameStateToVisualRepresentation(std::array
 		}
 		else
 		{
-			switch (index)
-			{
-			case 0:
-				displayData[index] = '1';
-				break;
-			case 1:
-				displayData[index] = '2';
-				break;
-			case 2:
-				displayData[index] = '3';
-				break;
-			case 3:
-				displayData[index] = '4';
-				break;
-			case 4:
-				displayData[index] = '5';
-				break;
-			case 5:
-				displayData[index] = '6';
-				break;
-			case 6:
-				displayData[index] = '7';
-				break;
-			case 7:
-				displayData[index] = '8';
-				break;
-			case 8:
-				displayData[index] = '9';
-			}
+			displayData[index] = std::to_string(index + 1);
 		}
 	}
 
