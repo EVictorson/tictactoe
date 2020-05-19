@@ -47,16 +47,71 @@ int playerOneScore = 0;
 int playerTwoScore = 0;
 char symbol;
 
-int main() {
-  printIntro();
-  showMenu();
-  playGame();
+std::string step1 = R"(
+Let's play...
+   |   |
+   |   |
+___|___|___
+   |   |
+   |   |
+___|___|___
+   |   |
+   |   |
+   |   |
+)";
+
+std::string step2 = R"(
+Let's play...
+   |   |
+   |   |
+___|___|___
+   |   |
+TIC|   |
+___|___|___
+   |   |
+   |   |
+   |   |
+)";
+
+std::string step3 = R"(
+Let's play...
+   |   |
+   |   |
+___|___|___
+   |   |
+TIC|TAC|
+___|___|___
+   |   |
+   |   |
+   |   |
+)";
+
+std::string step4 = R"(
+Let's play...
+   |   |
+   |   |
+___|___|___
+   |   |
+TIC|TAC|TOE!
+___|___|___
+   |   |
+   |   |
+   |   |
+)";
+
+std::array <std::string, 5> introductionAnimationSequence{ step1, step2, step3, step4 };
+
+int main()
+{
+	printIntro();
+	showMenu();
+	playGame();
 }
 
 void printIntro()
 {
 	Animator animator;
-	animator.introduceGame();
+	animator.animate(introductionAnimationSequence);
 }
 
 void showMenu() {
@@ -279,17 +334,14 @@ void setUpGame() {
 	//}
 }
 
-void askToPlayAgain()
-{
+void askToPlayAgain() {
 	char playerAnswer;
 	std::cout << "Do you want to play again? Y/N...\n";
 	std::cin >> playerAnswer;
 
-	if (playerAnswer == 'y' || playerAnswer == 'Y')
-	{
+	if (playerAnswer == 'y' || playerAnswer == 'Y') {
 		playGame();
-	}
-	else {
+	} else {
 		system("CLS");
 	}
 }
@@ -326,8 +378,7 @@ void checkForWin() {
 	gameWon = gameWinChecker.checkIfSymbolHasWon(symbol, gameState);
 }
 
-void displayGameState(std::array <char, gameBoardSize> gameState)
-{
+void displayGameState(std::array <char, gameBoardSize> gameState) {
 	system("CLS");
 	GameDataConverter gameDataConverter;
 	std::cout << gameDataConverter.convertGameStateToVisualRepresentation(gameState);
