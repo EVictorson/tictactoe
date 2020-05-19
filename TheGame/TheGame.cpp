@@ -15,9 +15,10 @@
 #include "GameWinChecker.h"
 #include "GameDataConverter.h"
 #include "MoveValidator.h"
+#include "Animator.h"
 
 void playGame();
-void printIntro();
+void printIntro(); // using refactored function
 void printInstructions();
 
 void setUpGame();
@@ -52,55 +53,10 @@ int main() {
   playGame();
 }
 
-void printIntro() {
-	std::cout << "Let's play...\n\n";
-	std::cout << "   |   |   \n";
-	std::cout << "   |   |   \n";
-	std::cout << "___|___|___\n";
-	std::cout << "   |   |   \n";
-	std::cout << "   |   |   \n";
-	std::cout << "___|___|___\n";
-	std::cout << "   |   |   \n";
-	std::cout << "   |   |   \n";
-	std::cout << "   |   |   \n\n";
-	Sleep(1000);
-	system("CLS");
-	std::cout << "Let's play...\n\n";
-	std::cout << "   |   |   \n";
-	std::cout << "   |   |   \n";
-	std::cout << "___|___|___\n";
-	std::cout << "   |   |   \n";
-	std::cout << "TIC|   |   \n";
-	std::cout << "___|___|___\n";
-	std::cout << "   |   |   \n";
-	std::cout << "   |   |   \n";
-	std::cout << "   |   |   \n\n";
-	Sleep(1000);
-	system("CLS");
-	std::cout << "Let's play...\n\n";
-	std::cout << "   |   |   \n";
-	std::cout << "   |   |   \n";
-	std::cout << "___|___|___\n";
-	std::cout << "   |   |   \n";
-	std::cout << "TIC|TAC|   \n";
-	std::cout << "___|___|___\n";
-	std::cout << "   |   |   \n";
-	std::cout << "   |   |   \n";
-	std::cout << "   |   |   \n\n";
-	Sleep(1000);
-	system("CLS");
-	std::cout << "Let's play...\n\n";
-	std::cout << "   |   |   \n";
-	std::cout << "   |   |   \n";
-	std::cout << "___|___|___\n";
-	std::cout << "   |   |   \n";
-	std::cout << "TIC|TAC|TOE!\n";
-	std::cout << "___|___|___\n";
-	std::cout << "   |   |   \n";
-	std::cout << "   |   |   \n";
-	std::cout << "   |   |   \n\n";
-	Sleep(2000);
-	system("CLS");
+void printIntro()
+{
+	Animator animator;
+	animator.introduceGame();
 }
 
 void showMenu() {
