@@ -147,12 +147,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Animator.cpp" />
     <ClCompile Include="GameDataConverter.cpp" />
     <ClCompile Include="GameWinChecker.cpp" />
     <ClCompile Include="MoveValidator.cpp" />
     <ClCompile Include="TheGame.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Animator.h" />
     <ClInclude Include="GameDataConverter.h" />
     <ClInclude Include="GameWinChecker.h" />
     <ClInclude Include="MoveValidator.h" />

@@ -27,6 +27,9 @@
     <ClCompile Include="MoveValidator.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Animator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameWinChecker.h">
@@ -36,6 +39,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="MoveValidator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Animator.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
