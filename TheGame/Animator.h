@@ -15,7 +15,5 @@
 class Animator
 {
 public:
-	void introduceGame();
-	
+	void animate(std::array <std::string, 5> animationSequence);
 };
-
