@@ -34,7 +34,17 @@ bool Menu::validateUserInput(int userInput, std::array <int, 3> submenuOptions)
 	}
 }
 
-void Menu::returnToMainMenu(bool anyKeyPressed)
+bool Menu::checkForAnyKeyPressed()
 {
+	int keyPressed = _getch();
+	if (keyPressed)
+	{
+		return true;
+	}
+	else
+	{
+		std::cout << "Press any key to return to the main menu...";
+	}
+}
 
 }
