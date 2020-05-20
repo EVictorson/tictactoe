@@ -2,29 +2,14 @@
 
 int Menu::getUserInput()
 {
-	int userInput = _getch();
 	bool userInputValid = false;
+	int userInput = _getch();
 	while (!userInputValid)
 	{
-		for (auto option : submenuOptions)
-		{
-			if (userInput == option)
-			{
-				userInputValid = true;
-				return userInput;
-			}
-			else if (userInput)
-			{
-				userInputValid = true;
-				return;
-			}
-		}
+		validateUserInput(userInput, submenuOptions);
 	}
-}
 
-bool Menu::checkForAnyKeyPressed(int userInput)
-{
-
+	return userInput;
 }
 
 void Menu::navigateToSubmenu(int userInput)
