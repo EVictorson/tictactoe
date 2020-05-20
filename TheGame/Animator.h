@@ -16,4 +16,58 @@ class Animator
 {
 public:
 	void animate(std::array <std::string, 5> animationSequence);
+
+    const std::string step1 = R"(
+Let's play...
+   |   |
+   |   |
+___|___|___
+   |   |
+   |   |
+___|___|___
+   |   |
+   |   |
+   |   |
+)";
+
+    const std::string step2 = R"(
+Let's play...
+   |   |
+   |   |
+___|___|___
+   |   |
+TIC|   |
+___|___|___
+   |   |
+   |   |
+   |   |
+)";
+
+    const std::string step3 = R"(
+Let's play...
+   |   |
+   |   |
+___|___|___
+   |   |
+TIC|TAC|
+___|___|___
+   |   |
+   |   |
+   |   |
+)";
+
+    const std::string step4 = R"(
+Let's play...
+   |   |
+   |   |
+___|___|___
+   |   |
+TIC|TAC|TOE!
+___|___|___
+   |   |
+   |   |
+   |   |
+)";
+
+    const std::array <std::string, 5> introductionAnimationSequence{ step1, step2, step3, step4 };
 };
