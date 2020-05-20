@@ -2,8 +2,9 @@
 
 #include <stdlib.h>
 #include <array>
-#include <string>
 #include <conio.h>
+#include <iostream>
+#include <string>
 
 class Menu
 {
