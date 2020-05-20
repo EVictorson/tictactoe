@@ -47,4 +47,17 @@ bool Menu::checkForAnyKeyPressed()
 	}
 }
 
+void Menu::navigateToSubmenu(int userInput)
+{
+	MenuDisplayer menuDisplayer;
+	menuDisplayer.displaySubmenu(userInput);
+}
+
+void Menu::returnToMainMenu(bool anyKeyPressed)
+{
+	if (anyKeyPressed)
+	{
+		MenuDisplayer menuDisplayer;
+		menuDisplayer.displayMainMenu();
+	}
 }
