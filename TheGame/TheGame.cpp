@@ -117,138 +117,24 @@ void printIntro()
 void showMenu()
 {
 	system("CLS");
-	std::cout << "+---------------+\n";
-	std::cout << "|  TIC TAC TOE  |\n";
-	std::cout << "+---------------+\n\n";
-	std::cout << "1. How to Play\n";
-	std::cout << "2. Scoreboard\n";
-	std::cout << "3. Credits\n\n\n\n";
-	std::cout << "Press [Enter] to play...\n";
 
-	validUserInput = false;
-	userInput = _getch();
+	// Main Menu String
 
-	while (!validUserInput)
-	{
-		if (userInput == '1')
-		{
-			validUserInput = true;
-			printInstructions();
-		}
-		else if (userInput == '2')
-		{
-			validUserInput = true;
-			showHighscoreMenu();
-		}
-		else if (userInput == '3')
-		{
-			validUserInput = true;
-			showCreditsMenu();
-		}
-		else if (userInput)
-		{
-			validUserInput = true;
-			return;
-		}
-		else
-		{
-			std::cout << "I'm sorry, I don't understand that command. Try again.\n";
-		}
-	}
+
 }
 
 void printInstructions()
 {
 	system("CLS");
-	std::cout << "+---------------+\n";
-	std::cout << "|  HOW TO PLAY  |\n";
-	std::cout << "+---------------+\n\n";
-	std::cout << "- Two players take turns placing their marker, an [X] or an [O].\n";
-	std::cout << "- Type a number on the grid and press \'Enter\' to place your marker there.\n\n";
-	std::cout << "Press any key to continue...";
+
+	// How to Play String
+
 	int pressedToContinue;
 	pressedToContinue = _getch();
 	if (pressedToContinue)
 	{
 		system("CLS");
-		std::cout << "+---------------+\n";
-		std::cout << "|  HOW TO PLAY  |\n";
-		std::cout << "+---------------+\n\n";
-		std::cout << "- Two players take turns placing their marker, an [X] or an [O].\n";
-		std::cout << "- Type a number on the grid and press \'Enter\' to place your marker there.\n\n";
-		std::cout << "+---------------+\n";
-		std::cout << "|  HOW TO WIN!  |\n";
-		std::cout << "+---------------+\n\n";
-		std::cout << "- Get three in a row vertically, horizontally or diagonally to win.\n\n";
-		std::cout << "   |   |               |   |               |   |   \n";
-		std::cout << "   |   |               |   |               |   |   \n";
-		std::cout << "___|___|___         ___|___|___         ___|___|___\n";
-		std::cout << "   |   |               |   |               |   |   \n";
-		std::cout << "   |   |               |   |               |   |   \n";
-		std::cout << "___|___|___         ___|___|___         ___|___|___\n";
-		std::cout << "   |   |               |   |               |   |   \n";
-		std::cout << "   |   |               |   |               |   |   \n";
-		std::cout << "   |   |               |   |               |   |   \n\n";
-		Sleep(1000);
-		system("CLS");
-		std::cout << "+---------------+\n";
-		std::cout << "|  HOW TO PLAY  |\n";
-		std::cout << "+---------------+\n\n";
-		std::cout << "- Two players take turns placing their marker, an [X] or an [O].\n";
-		std::cout << "- Type a number on the grid and press \'Enter\' to place your marker there.\n\n";
-		std::cout << "+---------------+\n";
-		std::cout << "|  HOW TO WIN!  |\n";
-		std::cout << "+---------------+\n\n";
-		std::cout << "- Get three in a row vertically, horizontally or diagonally to win.\n\n";
-		std::cout << "   |   |               |   |               |   |   \n";
-		std::cout << "   | X |               |   |             X |   |   \n";
-		std::cout << "___|___|___         ___|___|___         ___|___|___\n";
-		std::cout << "   |   |               |   |               |   |   \n";
-		std::cout << "   |   |             X |   |               |   |   \n";
-		std::cout << "___|___|___         ___|___|___         ___|___|___\n";
-		std::cout << "   |   |               |   |               |   |   \n";
-		std::cout << "   |   |               |   |               |   |   \n";
-		std::cout << "   |   |               |   |               |   |   \n\n";
-		Sleep(1000);
-		system("CLS");
-		std::cout << "+---------------+\n";
-		std::cout << "|  HOW TO PLAY  |\n";
-		std::cout << "+---------------+\n\n";
-		std::cout << "- Two players take turns placing their marker, an [X] or an [O].\n";
-		std::cout << "- Type a number on the grid and press \'Enter\' to place your marker there.\n\n";
-		std::cout << "+---------------+\n";
-		std::cout << "|  HOW TO WIN!  |\n";
-		std::cout << "+---------------+\n\n";
-		std::cout << "- Get three in a row vertically, horizontally or diagonally to win.\n\n";
-		std::cout << "   |   |               |   |               |   |   \n";
-		std::cout << "   | X |               |   |             X |   |   \n";
-		std::cout << "___|___|___         ___|___|___         ___|___|___\n";
-		std::cout << "   |   |               |   |               |   |   \n";
-		std::cout << "   | X |             X | X |               | X |   \n";
-		std::cout << "___|___|___         ___|___|___         ___|___|___\n";
-		std::cout << "   |   |               |   |               |   |   \n";
-		std::cout << "   |   |               |   |               |   |   \n";
-		std::cout << "   |   |               |   |               |   |   \n\n";
-		Sleep(1000);
-		system("CLS");
-		std::cout << "+---------------+\n";
-		std::cout << "|  HOW TO PLAY  |\n";
-		std::cout << "+---------------+\n\n";
-		std::cout << "- Two players take turns placing their marker, an [X] or an [O].\n";
-		std::cout << "- Type a number on the grid and press \'Enter\' to place your marker there.\n\n";
-		std::cout << "+---------------+\n";
-		std::cout << "|  HOW TO WIN!  |\n";
-		std::cout << "+---------------+\n\n";
-		std::cout << "- Get three in a row vertically, horizontally or diagonally to win.\n\n";
-		std::cout << "   |   |               |   |               |   |   \n";
-		std::cout << "   | X |               |   |             X |   |   \n";
-		std::cout << "___|___|___         ___|___|___         ___|___|___\n";
-		std::cout << "   |   |               |   |               |   |   \n";
-		std::cout << "   | X |             X | X | X             | X |   \n";
-		std::cout << "___|___|___         ___|___|___         ___|___|___\n";
-		std::cout << "   |   |               |   |               |   |   \n";
-		std::cout << "   | X |               |   |               |   | X \n";
-		std::cout << "   |   |               |   |               |   |   \n\n";
+		// how to win string
 	}
 	else
 	{
@@ -273,10 +159,7 @@ void printInstructions()
 void showHighscoreMenu()
 {
 	system("CLS");
-	std::cout << "+--------------+\n";
-	std::cout << "|  SCOREBOARD  |\n";
-	std::cout << "+--------------+\n\n";
-	std::cout << "This feature is coming soon!\n\n";
+	// highscore menu string
 
 	int keyPressed;
 	std::cout << "Press any key to return to the main menu...";
@@ -295,10 +178,7 @@ void showHighscoreMenu()
 void showCreditsMenu()
 {
 	system("CLS");
-	std::cout << "+-----------+\n";
-	std::cout << "|  CREDITS  |\n";
-	std::cout << "+-----------+\n\n";
-	std::cout << "This game was made by Tessa Power.\n\n";
+	// Credits submenu string
 
 	int keyPressed;
 	std::cout << "Press any key to return to the main menu...";
