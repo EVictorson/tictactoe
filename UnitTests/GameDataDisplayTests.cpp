@@ -82,5 +82,7 @@ namespace GameDataDisplayTests
 			// Assert
 			Assert::AreEqual(expectedGameBoard, gameBoard);
 		}
+
 	};
+
 }
