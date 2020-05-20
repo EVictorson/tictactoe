@@ -9,8 +9,8 @@
 class Menu
 {
 	int getUserInput();
-	int checkForAnyKeyPressed(int userInput);
+	bool checkForAnyKeyPressed(int userInput);
 	void navigateToSubmenu(int userInput);
-	void returnToMainMenu(int userInput);
+	void returnToMainMenu(bool anyKeyPressed);
+	std::array <int, 3> submenuOptions{ 1, 2, 3 };
 };
-
