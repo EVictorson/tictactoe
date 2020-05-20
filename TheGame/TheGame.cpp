@@ -47,7 +47,7 @@ int playerOneScore = 0;
 int playerTwoScore = 0;
 char symbol;
 
-std::string step1 = R"(
+const std::string step1 = R"(
 Let's play...
    |   |
    |   |
@@ -60,7 +60,7 @@ ___|___|___
    |   |
 )";
 
-std::string step2 = R"(
+const std::string step2 = R"(
 Let's play...
    |   |
    |   |
@@ -73,7 +73,7 @@ ___|___|___
    |   |
 )";
 
-std::string step3 = R"(
+const std::string step3 = R"(
 Let's play...
    |   |
    |   |
@@ -86,7 +86,7 @@ ___|___|___
    |   |
 )";
 
-std::string step4 = R"(
+const std::string step4 = R"(
 Let's play...
    |   |
    |   |
@@ -99,7 +99,7 @@ ___|___|___
    |   |
 )";
 
-std::array <std::string, 5> introductionAnimationSequence{ step1, step2, step3, step4 };
+const std::array <std::string, 5> introductionAnimationSequence{ step1, step2, step3, step4 };
 
 int main()
 {
