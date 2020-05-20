@@ -2,10 +2,27 @@
 
 int Menu::getUserInput()
 {
-
+	int userInput = _getch();
+	bool userInputValid = false;
+	while (!userInputValid)
+	{
+		for (auto option : submenuOptions)
+		{
+			if (userInput == option)
+			{
+				userInputValid = true;
+				return userInput;
+			}
+			else if (userInput)
+			{
+				userInputValid = true;
+				return;
+			}
+		}
+	}
 }
 
-int Menu::checkForAnyKeyPressed(int userInput)
+bool Menu::checkForAnyKeyPressed(int userInput)
 {
 
 }
