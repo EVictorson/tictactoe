@@ -12,29 +12,25 @@ int Menu::getUserInput()
 	return userInput;
 }
 
-void Menu::navigateToSubmenu(int userInput)
+bool Menu::validateUserInput(int userInput, std::array <int, 3> submenuOptions)
 {
-	validUserInput = false;
-	userInput = _getch();
-
-	while (!validUserInput)
+	for (auto option : submenuOptions)
 	{
-		if (userInput == '1')
+		if (userInput == option)
 		{
-			validUserInput = true;
-			printInstructions();
+			return true;
+			break;
 		}
-		else if (userInput == '2')
+		else if (userInput)
 		{
-			validUserInput = true;
-			showScoreboard();
+			return true;
+			break;
 		}
-		else if (userInput == '3')
-		{
-			validUserInput = true;
-			showCredits();
-		}
+	}
 
+	if (!userInput)
+	{
+		std::cout << "Sorry, that's not something I can do. Try again.\n" << std::endl;
 	}
 }
 
