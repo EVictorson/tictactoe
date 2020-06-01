@@ -32,6 +32,6 @@ void MenuDisplayer::displaySubmenu(int userInput)
 
 void MenuDisplayer::displayMainMenu()
 {
-	Animator menuAnimator;
-	menuAnimator.animate(mainMenu);
+	system("CLS");
+	std::cout << mainMenu;
 }
