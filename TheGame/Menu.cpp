@@ -16,7 +16,7 @@ bool Menu::validateUserInput(int userInput, std::array <int, 3> submenuOptions)
 {
 	for (auto option : submenuOptions)
 	{
-		if (userInput == option)
+		if (option == userInput)
 		{
 			return true;
 			break;
