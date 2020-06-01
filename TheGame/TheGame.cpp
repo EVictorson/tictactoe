@@ -57,12 +57,7 @@ int main()
 void printIntro()
 {
 	Animator animator;
-	animator.animate(introductionAnimationSequence);
-}
-
-void showMenu() {
-	system("CLS");
-	// Main Menu String
+	animator.animate(animator.introSequence);
 }
 
 void printInstructions() {
@@ -117,6 +112,15 @@ void showCreditsMenu() {
 		std::cout << "Press any key to return to the main menu...";
 		_getch();
 	}
+
+void showMenu()
+{
+	Menu menu;
+	MenuDisplayer menuDisplayer;
+
+	menuDisplayer.displayMainMenu();
+	int userInput = menu.getUserInput();
+	menu.navigateToSubmenu(userInput);
 }
 
 void playGame() {
