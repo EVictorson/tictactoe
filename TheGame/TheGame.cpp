@@ -56,87 +56,17 @@ int main()
 void printIntro()
 {
 	Animator animator;
-	animator.animate(introductionAnimationSequence);
+	animator.animate(animator.introSequence);
 }
 
 void showMenu()
 {
-	system("CLS");
+	Menu menu;
+	MenuDisplayer menuDisplayer;
 
-	// Main Menu String
-
-
-}
-
-void printInstructions()
-{
-	system("CLS");
-
-	// How to Play String
-
-	int pressedToContinue;
-	pressedToContinue = _getch();
-	if (pressedToContinue)
-	{
-		system("CLS");
-		// how to win string
-	}
-	else
-	{
-		std::cout << "Press any key to continue...";
-		_getch();
-	}
-
-	std::cout << "Press any key to return to the main menu...";
-	int keyPressed;
-	keyPressed = _getch();
-	if (keyPressed)
-	{
-		showMenu();
-	}
-	else
-	{
-		std::cout << "Press any key to return to the main menu...";
-		_getch();
-	}
-}
-
-void showHighscoreMenu()
-{
-	system("CLS");
-	// highscore menu string
-
-	int keyPressed;
-	std::cout << "Press any key to return to the main menu...";
-	keyPressed = _getch();
-	if (keyPressed)
-	{
-		showMenu();
-	}
-	else
-	{
-		std::cout << "Press any key to return to the main menu...";
-		_getch();
-	}
-}
-
-void showCreditsMenu()
-{
-	system("CLS");
-	// Credits submenu string
-
-	int keyPressed;
-	std::cout << "Press any key to return to the main menu...";
-		keyPressed = _getch();
-	if (keyPressed)
-	{
-		showMenu();
-	}
-	else
-	{
-		std::cout << "Press any key to return to the main menu...";
-		_getch();
-	}
+	menuDisplayer.displayMainMenu();
+	int userInput = menu.getUserInput();
+	menu.navigateToSubmenu(userInput);
 }
 
 void playGame()
