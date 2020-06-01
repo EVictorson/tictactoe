@@ -157,8 +157,8 @@
     <ClCompile Include="Animator.cpp" />
     <ClCompile Include="GameDataConverter.cpp" />
     <ClCompile Include="GameWinChecker.cpp" />
+    <ClCompile Include="Menu.cpp" />
     <ClCompile Include="menuDisplayer.cpp" />
-    <ClCompile Include="MenuNavigator.cpp" />
     <ClCompile Include="MoveValidator.cpp" />
     <ClCompile Include="TheGame.cpp" />
   </ItemGroup>
@@ -166,8 +166,8 @@
     <ClInclude Include="Animator.h" />
     <ClInclude Include="GameDataConverter.h" />
     <ClInclude Include="GameWinChecker.h" />
+    <ClInclude Include="Menu.h" />
     <ClInclude Include="menuDisplayer.h" />
-    <ClInclude Include="MenuNavigator.h" />
     <ClInclude Include="MoveValidator.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

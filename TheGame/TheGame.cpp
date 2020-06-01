@@ -12,6 +12,8 @@
 #include <conio.h>
 #include <string>
 #include <array>
+#include "Menu.h"
+#include "menuDisplayer.h"
 #include "GameWinChecker.h"
 #include "GameDataConverter.h"
 #include "MoveValidator.h"
