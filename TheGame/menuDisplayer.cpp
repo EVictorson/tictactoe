@@ -2,22 +2,32 @@
 
 void MenuDisplayer::displaySubmenu(int userInput)
 {
-	std::array <std::string, 5> submenu{};
+	//std::array <std::string, 5> submenu{};
 
-	Animator submenuAnimator;
+	//Animator submenuAnimator;
 	switch (userInput)
 	{
 	case 1:
-		submenu = howToPlayMenu;
+		system("CLS");
+		std::cout << howToPlayMenu << std::endl;
+		std::cout << returnToMainMenu << std::endl;
 	case 2:
-		submenu = highscoreMenu;
+		system("CLS");
+		std::cout << highscoreMenu << std::endl;
+		std::cout << returnToMainMenu << std::endl;
 	case 3:
-		submenu = creditsMenu;
+		system("CLS");
+		std::cout << creditsMenu << std::endl;
+		std::cout << returnToMainMenu << std::endl;
 	default:
-		submenu = mainMenu;
+		displayMainMenu();
 	}
 
-	submenuAnimator.animate(submenu);
+	//submenuAnimator.animate(submenu);
+	//if (submenu != mainMenu)
+	//{
+	//	std::cout << returnToMainMenu << std::endl;
+	//}
 }
 
 void MenuDisplayer::displayMainMenu()
