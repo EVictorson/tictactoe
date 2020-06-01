@@ -21,7 +21,7 @@
 
 void playGame();
 void printIntro(); // using refactored function
-void printInstructions();
+void showMenu();
 
 void setUpGame();
 void askToPlayAgain();
@@ -32,9 +32,6 @@ const int gameBoardSize = 9;
 void displayGameState(std::array <char, gameBoardSize> gameState); // using refactored function
 
 void printWinningMessage();
-void showMenu();
-void showHighscoreMenu();
-void showCreditsMenu();
 
 std::array <char, gameBoardSize> gameState { };
 std::string gameBoard;
