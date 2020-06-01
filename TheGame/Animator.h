@@ -69,5 +69,5 @@ ___|___|___
    |   |
 )";
 
-    const std::array <std::string, 5> introductionAnimationSequence{ step1, step2, step3, step4 };
+    const std::array <std::string, 5> introSequence{ step1, step2, step3, step4 };
 };
