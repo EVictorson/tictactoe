@@ -21,7 +21,9 @@
 
 void playGame();
 void printIntro(); // using refactored function
-void printInstructions();
+void showMenu();
+void showHighscoreMenu();
+void showCreditsMenu();
 
 void setUpGame();
 void askToPlayAgain();
@@ -31,11 +33,7 @@ bool horizontalWin, verticalWin, diagonalWin, gameWon;
 void checkForWin(); // using refactored function
 const int gameBoardSize = 9;
 void displayGameState(std::array <char, gameBoardSize> gameState); // using refactored function
-
-void printWinningMessage(); // TODO: use draw method to print winning message
-void showMenu(); // TODO: use draw method to show menu
-void showHighscoreMenu();
-void showCreditsMenu();
+void printWinningMessage();
 
 std::array <char, gameBoardSize> gameState { };
 std::string gameBoard;
