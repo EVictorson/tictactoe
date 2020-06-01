@@ -189,5 +189,23 @@ namespace GameLogicTests
 			// Assert
 			Assert::IsFalse(moveIsValid, L"More information here...");
 		}
+
+		TEST_METHOD(ExpectInvalid_GameStateNoWin_SomeMovesMadeX)
+		{
+			// Arrange
+			int playerMove = 10;
+			std::array<char, 9> gameState = {
+				'X', '\0', 'O',
+				'\0', 'O', '\0',
+				'\0', 'X', '\0'
+			};
+
+			// Act
+			MoveValidator moveValidator;
+			bool moveIsValid = moveValidator.checkIfMoveIsValid(playerMove, gameState);
+
+			// Assert
+			Assert::IsFalse(moveIsValid, L"More information here...");
+		}
 	};
 }
