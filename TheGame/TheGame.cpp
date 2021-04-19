@@ -22,22 +22,21 @@
 void playGame();
 void printIntro(); // using refactored function
 void showMenu();
-void showHighscoreMenu();
-void showCreditsMenu();
 
 void setUpGame();
 void askToPlayAgain();
 void getPlayerMove(char playerSymbol); // using refactored function
 
-bool horizontalWin, verticalWin, diagonalWin, gameWon;
 void checkForWin(); // using refactored function
 const int gameBoardSize = 9;
 void displayGameState(std::array <char, gameBoardSize> gameState); // using refactored function
+
 void printWinningMessage();
 
 std::array <char, gameBoardSize> gameState { };
 std::string gameBoard;
 std::string scoreBoard;
+bool gameWon;
 int playerMove;
 int playerTurns;
 int currentTurn;
@@ -84,35 +83,6 @@ void printInstructions() {
 	}
 }
 
-void showHighscoreMenu() {
-	system("CLS");
-	// highscore menu string
-
-	int keyPressed;
-	std::cout << "Press any key to return to the main menu...";
-	keyPressed = _getch();
-	if (keyPressed) {
-		showMenu();
-	} else {
-		std::cout << "Press any key to return to the main menu...";
-		_getch();
-	}
-}
-
-void showCreditsMenu() {
-	system("CLS");
-	// Credits submenu string
-
-	int keyPressed;
-	std::cout << "Press any key to return to the main menu...";
-		keyPressed = _getch();
-	if (keyPressed) {
-		showMenu();
-	} else {
-		std::cout << "Press any key to return to the main menu...";
-		_getch();
-	}
-
 void showMenu()
 {
 	Menu menu;
@@ -153,15 +123,11 @@ void playGame() {
 	askToPlayAgain();
 }
 
-void setUpGame() {
+void setUpGame()
+{
 	maximumPlayerTurns = gameBoardSize;
 	currentTurn = 1;
 
-  if (playerAnswer == 'y' || playerAnswer == 'Y') {
-    playGame();
-  } else {
-    system("CLS");
-  }
 	// Populate the grid spaces with place holder numbers
 	//for (int i = 0; i < gameBoardSize; i++) {
 
@@ -174,7 +140,8 @@ void askToPlayAgain() {
 	std::cout << "Do you want to play again? Y/N...\n";
 	std::cin >> playerAnswer;
 
-	if (playerAnswer == 'y' || playerAnswer == 'Y') {
+	if (playerAnswer == 'y' || playerAnswer == 'Y')
+	{
 		playGame();
 	} else {
 		system("CLS");
@@ -198,16 +165,6 @@ void getPlayerMove(char playerSymbol) {
 	}
 }
 
-void printWinningMessage() {
-  if (currentTurn % 2 == 1) {
-    std::cout << "> Player 1 wins! [X]\n\n";
-    playerOneScore++;
-  } else {
-    std::cout << "> Player 2 wins! [O]\n\n";
-    playerTwoScore++;
-  }
-}
-
 void checkForWin() {
 	GameWinChecker gameWinChecker;
 	gameWon = gameWinChecker.checkIfSymbolHasWon(symbol, gameState);
@@ -217,5 +174,15 @@ void displayGameState(std::array <char, gameBoardSize> gameState) {
 	system("CLS");
 	GameDataConverter gameDataConverter;
 	std::cout << gameDataConverter.convertGameStateToVisualRepresentation(gameState);
+}
+
+void printWinningMessage() {
+	if (currentTurn % 2 == 1) {
+		std::cout << "> Player 1 wins! [X]\n\n";
+		playerOneScore++;
+	} else {
+		std::cout << "> Player 2 wins! [O]\n\n";
+		playerTwoScore++;
+	}
 }
 
